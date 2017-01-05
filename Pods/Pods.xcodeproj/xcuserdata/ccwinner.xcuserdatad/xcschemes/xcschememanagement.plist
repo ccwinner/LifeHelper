@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-LifeHelper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LifeHelperClient.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYModel-OSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYModel-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>173F86AF5C7684CDAF0E57FD93E32F2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F354EC819F474A8730E3412E835084C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93DBB6E2E022894BF97EB8B488DD2A42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EEAC7437ADEB47721536E5148078A088</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5E5C444F666B764390020DEF7780776</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,937 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05E3B9623FE6AD144CBC3DEEB9B71831 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20A7196751968F71AEA5B814A1A336E /* Foundation.framework */; };
+		157A28C900447CB4BB06A766253C79B2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B61344F911E2E14C27DD15D0DD5CD7 /* CoreFoundation.framework */; };
+		1E7790A7EDBAA0DB112274674FEF441D /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC69E4BBDB5593C75E722B8644F843 /* YYMemoryCache.m */; };
+		22FC7FEAEEAE738E34E7D7F17867D8DB /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F77BDA52920B21E92DEE21F2CC560A0 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C753796F53C8B29C2134347143C4A5D /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2187FBACFBB2D4113855DEC74B5646 /* YYClassInfo.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		30610CA08EA44DC67854784EEA45E58A /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C714C3BD69D9AC467BA88F7EA379ADF /* YYKVStorage.m */; };
+		3140766BE2472750BEAC4F2B678E77DE /* YYModel-OSX-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BE81490E6A942E56DA0DBF7A9A7402 /* YYModel-OSX-dummy.m */; };
+		35A826C3DAF6C3DCAB22686F109AEFA4 /* YYKVStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0528ACB7A9EFFAD6CA23D761128F23D9 /* YYKVStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FBCBB4EBD44B01EEB9ED0B2D5C30FBC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0FE177CDAAC6187FB4C0AA2AA5347C /* QuartzCore.framework */; };
+		42C6E34B2697FEBD0FD0B6DA53C08726 /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2B42659B0BEB6B03E8465608C004C7 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DD04FD8972BFAB7C70A062D17237CB4 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DB88E5B3734D8B9C816DBF93B34281 /* YYDiskCache.m */; };
+		4F71C288771AC0DB70F06954B0AA5C46 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2187FBACFBB2D4113855DEC74B5646 /* YYClassInfo.m */; };
+		5819350F472A4D9C0530318F19EF0B62 /* YYCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BA744B9830B2F1E47BC91E7A2DDE8C /* YYCache-dummy.m */; };
+		5EF6AF3D135962571577A5DC5C7C9941 /* YYMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FD6ECA16A2B96649D03C9CD624E57789 /* YYMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		612C9AF7437AA90340EA5FF033DC7384 /* YYCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C356C70A81C2EEB28DBD408FC8D886F /* YYCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69E8AB7438957DD65EB2018FEFC9DFDF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C7A11DB7D27F7EF4BC05106A600505 /* CoreFoundation.framework */; };
+		71672E581F44FDE8320F8A1618231F64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE56FA599ED9695614C57CCAD89BA89 /* Foundation.framework */; };
+		7793D788BC5ECC1AC214E5A2F461E729 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4E046A175C8E8A3C964D1F8AB1E68F /* YYCache.m */; };
+		78D3394C468B8FB17E5D4AE73A6F9852 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C798FD5DEDAB971B1A25F6018AEDEB /* NSObject+YYModel.m */; };
+		7AF979E2A8BA0D30659B56E0E22BB4E2 /* YYDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = AF048822E3EB6C18D0FEF4F0565A760B /* YYDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90FC594FFFF8A54C1182CC5B97B17219 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7265BB5F29BDA22EB98BDA909D8EB063 /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93FF2467BC7932CD0C9B4AE2F3234F7A /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F77BDA52920B21E92DEE21F2CC560A0 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95010BFBA1121A8BB143768C7CF9BE0D /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C798FD5DEDAB971B1A25F6018AEDEB /* NSObject+YYModel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B43D5A08B1D73F35FED294AB98844479 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E67A0FBB461ABF54B481DDD2AD08BED /* Cocoa.framework */; };
+		C1741492B1F638D35CE03FDB6F39FC54 /* YYModel-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D84F59191D8B67E51D923045637986 /* YYModel-iOS-dummy.m */; };
+		CF3678FBD9AB12124B92E3D3F95D3184 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F33506A5B06D2DE53ADEE507EB3E144 /* UIKit.framework */; };
+		D072DBC547BD25A140AE97E21305328E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C7A11DB7D27F7EF4BC05106A600505 /* CoreFoundation.framework */; };
+		D2A47C3003238AF9B3A3ACB734D2B385 /* Pods-LifeHelperClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A77700265B3368CBD58864A44C0606 /* Pods-LifeHelperClient-dummy.m */; };
+		D750073BB24452DD75CA5B051C39C78C /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2B42659B0BEB6B03E8465608C004C7 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE69CA0F51AE2542CD5078FC1745E267 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E67A0FBB461ABF54B481DDD2AD08BED /* Cocoa.framework */; };
+		DF3A14BA0B62C6DEEF290FD3FB6692B6 /* Pods-LifeHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1533D2684BE5E665C8FC074EDDA8DB68 /* Pods-LifeHelper-dummy.m */; };
+		E5BDFBA0BB5009C6F85CB8C764B95A63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE56FA599ED9695614C57CCAD89BA89 /* Foundation.framework */; };
+		EBBDA8C0BD3E817819C275ECD99F5D63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE56FA599ED9695614C57CCAD89BA89 /* Foundation.framework */; };
+		F9CBDBB3B31EE6E62695021E380D3496 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7265BB5F29BDA22EB98BDA909D8EB063 /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4484A769BEF21FD3318F318E49E58C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 173F86AF5C7684CDAF0E57FD93E32F2E;
+			remoteInfo = YYCache;
+		};
+		AC922A8F974C5AE005980AC38566AE18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93DBB6E2E022894BF97EB8B488DD2A42;
+			remoteInfo = "YYModel-iOS";
+		};
+		B9BC14A744BC9860221296817BB73D36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEAC7437ADEB47721536E5148078A088;
+			remoteInfo = "YYModel-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0528ACB7A9EFFAD6CA23D761128F23D9 /* YYKVStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYKVStorage.h; path = YYCache/YYKVStorage.h; sourceTree = "<group>"; };
+		07C798FD5DEDAB971B1A25F6018AEDEB /* NSObject+YYModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
+		09DCB491CBC731C749B914CBD68EBBE4 /* YYModel-OSX-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYModel-OSX-prefix.pch"; sourceTree = "<group>"; };
+		0F77BDA52920B21E92DEE21F2CC560A0 /* YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = YYModel/YYModel.h; sourceTree = "<group>"; };
+		1533D2684BE5E665C8FC074EDDA8DB68 /* Pods-LifeHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LifeHelper-dummy.m"; sourceTree = "<group>"; };
+		1CCC69E4BBDB5593C75E722B8644F843 /* YYMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYMemoryCache.m; path = YYCache/YYMemoryCache.m; sourceTree = "<group>"; };
+		1D7E715577B35C02FC26E5CDE4FAE6F6 /* YYCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYCache.xcconfig; sourceTree = "<group>"; };
+		34A0AF38FD1956B7106B12494D049335 /* Pods-LifeHelper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LifeHelper-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3D2B42659B0BEB6B03E8465608C004C7 /* YYClassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = YYModel/YYClassInfo.h; sourceTree = "<group>"; };
+		3E67A0FBB461ABF54B481DDD2AD08BED /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		406E0C3428EE77E1051F55DA00561EFB /* libYYModel-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libYYModel-iOS.a"; path = "libYYModel-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		429022E551AA486DDE0148B15668FC31 /* YYModel-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "YYModel-iOS.xcconfig"; path = "../YYModel-iOS/YYModel-iOS.xcconfig"; sourceTree = "<group>"; };
+		43B9A91F62B093CE6D082ABD5CD4AAA9 /* Pods-LifeHelperClient-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifeHelperClient-frameworks.sh"; sourceTree = "<group>"; };
+		44D84F59191D8B67E51D923045637986 /* YYModel-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "YYModel-iOS-dummy.m"; path = "../YYModel-iOS/YYModel-iOS-dummy.m"; sourceTree = "<group>"; };
+		4A6A59FD99C2277FA19E6067C9A13B94 /* Pods-LifeHelper-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifeHelper-resources.sh"; sourceTree = "<group>"; };
+		4C4C88E8469C0F7042B6645F06D2925F /* libYYCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libYYCache.a; path = libYYCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C714C3BD69D9AC467BA88F7EA379ADF /* YYKVStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYKVStorage.m; path = YYCache/YYKVStorage.m; sourceTree = "<group>"; };
+		4E457799BB264F7E78E6E6F7F098C28D /* YYCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYCache-prefix.pch"; sourceTree = "<group>"; };
+		5462D03958A80DD2E450EBAA83740ED6 /* libYYModel-OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libYYModel-OSX.a"; path = "libYYModel-OSX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C356C70A81C2EEB28DBD408FC8D886F /* YYCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYCache.h; path = YYCache/YYCache.h; sourceTree = "<group>"; };
+		61C7A11DB7D27F7EF4BC05106A600505 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		65E7128EA358BC4039E96E1FBB0F221B /* Pods-LifeHelperClient-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifeHelperClient-resources.sh"; sourceTree = "<group>"; };
+		68AC1D97D9D1CD56ECF836FA2405E0EE /* YYModel-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YYModel-iOS-prefix.pch"; path = "../YYModel-iOS/YYModel-iOS-prefix.pch"; sourceTree = "<group>"; };
+		7265BB5F29BDA22EB98BDA909D8EB063 /* NSObject+YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
+		7A9B2F4E9929EF5D1661DD0CC81B0BEC /* Pods-LifeHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifeHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		7BE82883710BCFB8F40817986A661852 /* YYModel-OSX.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YYModel-OSX.xcconfig"; sourceTree = "<group>"; };
+		7EE56FA599ED9695614C57CCAD89BA89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7F33506A5B06D2DE53ADEE507EB3E144 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		92A77700265B3368CBD58864A44C0606 /* Pods-LifeHelperClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LifeHelperClient-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96BA744B9830B2F1E47BC91E7A2DDE8C /* YYCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYCache-dummy.m"; sourceTree = "<group>"; };
+		96BE81490E6A942E56DA0DBF7A9A7402 /* YYModel-OSX-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYModel-OSX-dummy.m"; sourceTree = "<group>"; };
+		AAE321847784D0B95CC28E64795F8D7D /* Pods-LifeHelperClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LifeHelperClient-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AB6666544277FD4B274C14BDADAD8442 /* Pods-LifeHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifeHelper.release.xcconfig"; sourceTree = "<group>"; };
+		AF048822E3EB6C18D0FEF4F0565A760B /* YYDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYDiskCache.h; path = YYCache/YYDiskCache.h; sourceTree = "<group>"; };
+		BAD378DCE08967B2B4A74D9D9E6065CD /* libPods-LifeHelperClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LifeHelperClient.a"; path = "libPods-LifeHelperClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DB88E5B3734D8B9C816DBF93B34281 /* YYDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYDiskCache.m; path = YYCache/YYDiskCache.m; sourceTree = "<group>"; };
+		C1F70707BF62E64BA37945B330F1D377 /* Pods-LifeHelperClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LifeHelperClient-acknowledgements.plist"; sourceTree = "<group>"; };
+		C20A7196751968F71AEA5B814A1A336E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CA4E046A175C8E8A3C964D1F8AB1E68F /* YYCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYCache.m; path = YYCache/YYCache.m; sourceTree = "<group>"; };
+		DA0FE177CDAAC6187FB4C0AA2AA5347C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		DF2187FBACFBB2D4113855DEC74B5646 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = YYModel/YYClassInfo.m; sourceTree = "<group>"; };
+		E018B61A371A3FC28054AEF1692CB3EF /* Pods-LifeHelper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LifeHelper-acknowledgements.plist"; sourceTree = "<group>"; };
+		E45B7BE25D2A476F39FEE19E3EA87567 /* Pods-LifeHelperClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifeHelperClient.debug.xcconfig"; sourceTree = "<group>"; };
+		E4B61344F911E2E14C27DD15D0DD5CD7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		EAA79B5A96162A90D10B1D3E7688C14E /* Pods-LifeHelper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LifeHelper-frameworks.sh"; sourceTree = "<group>"; };
+		EDBA6BD4335345409C05A6FF3173B5C2 /* Pods-LifeHelperClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LifeHelperClient.release.xcconfig"; sourceTree = "<group>"; };
+		FC8504EE2FDE1C397D7C3A245B337C00 /* libPods-LifeHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LifeHelper.a"; path = "libPods-LifeHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6ECA16A2B96649D03C9CD624E57789 /* YYMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYMemoryCache.h; path = YYCache/YYMemoryCache.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B947B5D2187C588AD5092E594B23F06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE69CA0F51AE2542CD5078FC1745E267 /* Cocoa.framework in Frameworks */,
+				157A28C900447CB4BB06A766253C79B2 /* CoreFoundation.framework in Frameworks */,
+				05E3B9623FE6AD144CBC3DEEB9B71831 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A2B1F6EEB1407B53B092AB81FB7C9CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43D5A08B1D73F35FED294AB98844479 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9356C47D62E51FAE71AD033CB2571381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69E8AB7438957DD65EB2018FEFC9DFDF /* CoreFoundation.framework in Frameworks */,
+				EBBDA8C0BD3E817819C275ECD99F5D63 /* Foundation.framework in Frameworks */,
+				3FBCBB4EBD44B01EEB9ED0B2D5C30FBC /* QuartzCore.framework in Frameworks */,
+				CF3678FBD9AB12124B92E3D3F95D3184 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ED9529B6D5C12A586774999F4022A13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D072DBC547BD25A140AE97E21305328E /* CoreFoundation.framework in Frameworks */,
+				E5BDFBA0BB5009C6F85CB8C764B95A63 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D12F73EF97E02B428813A9D32BA07D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71672E581F44FDE8320F8A1618231F64 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1520600ABDDE87429A221D8A7ED6F410 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				7265BB5F29BDA22EB98BDA909D8EB063 /* NSObject+YYModel.h */,
+				07C798FD5DEDAB971B1A25F6018AEDEB /* NSObject+YYModel.m */,
+				3D2B42659B0BEB6B03E8465608C004C7 /* YYClassInfo.h */,
+				DF2187FBACFBB2D4113855DEC74B5646 /* YYClassInfo.m */,
+				0F77BDA52920B21E92DEE21F2CC560A0 /* YYModel.h */,
+				5C716CB9744A48D9A2EF87BEA2FD753E /* Support Files */,
+			);
+			name = YYModel;
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		2E80639EA2037C38FC6CD98D6C4DE259 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCAD3F6E139874A0415E6A4AAF8268FE /* iOS */,
+				E9DC7D97717875D71C95B282EC88CD76 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AA545042A11DB98B1A945AB27926F39 /* Pods-LifeHelperClient */ = {
+			isa = PBXGroup;
+			children = (
+				AAE321847784D0B95CC28E64795F8D7D /* Pods-LifeHelperClient-acknowledgements.markdown */,
+				C1F70707BF62E64BA37945B330F1D377 /* Pods-LifeHelperClient-acknowledgements.plist */,
+				92A77700265B3368CBD58864A44C0606 /* Pods-LifeHelperClient-dummy.m */,
+				43B9A91F62B093CE6D082ABD5CD4AAA9 /* Pods-LifeHelperClient-frameworks.sh */,
+				65E7128EA358BC4039E96E1FBB0F221B /* Pods-LifeHelperClient-resources.sh */,
+				E45B7BE25D2A476F39FEE19E3EA87567 /* Pods-LifeHelperClient.debug.xcconfig */,
+				EDBA6BD4335345409C05A6FF3173B5C2 /* Pods-LifeHelperClient.release.xcconfig */,
+			);
+			name = "Pods-LifeHelperClient";
+			path = "Target Support Files/Pods-LifeHelperClient";
+			sourceTree = "<group>";
+		};
+		3EE2E0ED5EED00A213E972AAC0F61E9D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D7E715577B35C02FC26E5CDE4FAE6F6 /* YYCache.xcconfig */,
+				96BA744B9830B2F1E47BC91E7A2DDE8C /* YYCache-dummy.m */,
+				4E457799BB264F7E78E6E6F7F098C28D /* YYCache-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YYCache";
+			sourceTree = "<group>";
+		};
+		474840F219489875F0CC3CC9B24DEB31 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63E3D9AB7C7BA1C42715FE0C29159F12 /* Pods-LifeHelper */,
+				3AA545042A11DB98B1A945AB27926F39 /* Pods-LifeHelperClient */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5C716CB9744A48D9A2EF87BEA2FD753E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				429022E551AA486DDE0148B15668FC31 /* YYModel-iOS.xcconfig */,
+				44D84F59191D8B67E51D923045637986 /* YYModel-iOS-dummy.m */,
+				68AC1D97D9D1CD56ECF836FA2405E0EE /* YYModel-iOS-prefix.pch */,
+				7BE82883710BCFB8F40817986A661852 /* YYModel-OSX.xcconfig */,
+				96BE81490E6A942E56DA0DBF7A9A7402 /* YYModel-OSX-dummy.m */,
+				09DCB491CBC731C749B914CBD68EBBE4 /* YYModel-OSX-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YYModel-OSX";
+			sourceTree = "<group>";
+		};
+		63E3D9AB7C7BA1C42715FE0C29159F12 /* Pods-LifeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				34A0AF38FD1956B7106B12494D049335 /* Pods-LifeHelper-acknowledgements.markdown */,
+				E018B61A371A3FC28054AEF1692CB3EF /* Pods-LifeHelper-acknowledgements.plist */,
+				1533D2684BE5E665C8FC074EDDA8DB68 /* Pods-LifeHelper-dummy.m */,
+				EAA79B5A96162A90D10B1D3E7688C14E /* Pods-LifeHelper-frameworks.sh */,
+				4A6A59FD99C2277FA19E6067C9A13B94 /* Pods-LifeHelper-resources.sh */,
+				7A9B2F4E9929EF5D1661DD0CC81B0BEC /* Pods-LifeHelper.debug.xcconfig */,
+				AB6666544277FD4B274C14BDADAD8442 /* Pods-LifeHelper.release.xcconfig */,
+			);
+			name = "Pods-LifeHelper";
+			path = "Target Support Files/Pods-LifeHelper";
+			sourceTree = "<group>";
+		};
+		74C18EA574072259D648007BF4733B92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC8504EE2FDE1C397D7C3A245B337C00 /* libPods-LifeHelper.a */,
+				BAD378DCE08967B2B4A74D9D9E6065CD /* libPods-LifeHelperClient.a */,
+				4C4C88E8469C0F7042B6645F06D2925F /* libYYCache.a */,
+				406E0C3428EE77E1051F55DA00561EFB /* libYYModel-iOS.a */,
+				5462D03958A80DD2E450EBAA83740ED6 /* libYYModel-OSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				2E80639EA2037C38FC6CD98D6C4DE259 /* Frameworks */,
+				A18865C95B9041CD1D7E69A6DB3080E1 /* Pods */,
+				74C18EA574072259D648007BF4733B92 /* Products */,
+				474840F219489875F0CC3CC9B24DEB31 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B98D919C79FA46DD93DD5135E3F2EF5 /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				5C356C70A81C2EEB28DBD408FC8D886F /* YYCache.h */,
+				CA4E046A175C8E8A3C964D1F8AB1E68F /* YYCache.m */,
+				AF048822E3EB6C18D0FEF4F0565A760B /* YYDiskCache.h */,
+				C0DB88E5B3734D8B9C816DBF93B34281 /* YYDiskCache.m */,
+				0528ACB7A9EFFAD6CA23D761128F23D9 /* YYKVStorage.h */,
+				4C714C3BD69D9AC467BA88F7EA379ADF /* YYKVStorage.m */,
+				FD6ECA16A2B96649D03C9CD624E57789 /* YYMemoryCache.h */,
+				1CCC69E4BBDB5593C75E722B8644F843 /* YYMemoryCache.m */,
+				3EE2E0ED5EED00A213E972AAC0F61E9D /* Support Files */,
+			);
+			name = YYCache;
+			path = YYCache;
+			sourceTree = "<group>";
+		};
+		A18865C95B9041CD1D7E69A6DB3080E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B98D919C79FA46DD93DD5135E3F2EF5 /* YYCache */,
+				1520600ABDDE87429A221D8A7ED6F410 /* YYModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9DC7D97717875D71C95B282EC88CD76 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				3E67A0FBB461ABF54B481DDD2AD08BED /* Cocoa.framework */,
+				E4B61344F911E2E14C27DD15D0DD5CD7 /* CoreFoundation.framework */,
+				C20A7196751968F71AEA5B814A1A336E /* Foundation.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		FCAD3F6E139874A0415E6A4AAF8268FE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				61C7A11DB7D27F7EF4BC05106A600505 /* CoreFoundation.framework */,
+				7EE56FA599ED9695614C57CCAD89BA89 /* Foundation.framework */,
+				DA0FE177CDAAC6187FB4C0AA2AA5347C /* QuartzCore.framework */,
+				7F33506A5B06D2DE53ADEE507EB3E144 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3DE54B80F85552A2DF652394BEAA065F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90FC594FFFF8A54C1182CC5B97B17219 /* NSObject+YYModel.h in Headers */,
+				42C6E34B2697FEBD0FD0B6DA53C08726 /* YYClassInfo.h in Headers */,
+				22FC7FEAEEAE738E34E7D7F17867D8DB /* YYModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44E436D19DDB5A7FDAAE0624087304D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9CBDBB3B31EE6E62695021E380D3496 /* NSObject+YYModel.h in Headers */,
+				D750073BB24452DD75CA5B051C39C78C /* YYClassInfo.h in Headers */,
+				93FF2467BC7932CD0C9B4AE2F3234F7A /* YYModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8E4AC0BE56265D439F3AAA00BC96A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				612C9AF7437AA90340EA5FF033DC7384 /* YYCache.h in Headers */,
+				7AF979E2A8BA0D30659B56E0E22BB4E2 /* YYDiskCache.h in Headers */,
+				35A826C3DAF6C3DCAB22686F109AEFA4 /* YYKVStorage.h in Headers */,
+				5EF6AF3D135962571577A5DC5C7C9941 /* YYMemoryCache.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		173F86AF5C7684CDAF0E57FD93E32F2E /* YYCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FCEA6C76FAD3FC42B4969E1E1766397 /* Build configuration list for PBXNativeTarget "YYCache" */;
+			buildPhases = (
+				536F908CC244D557F5E226B38899644C /* Sources */,
+				9356C47D62E51FAE71AD033CB2571381 /* Frameworks */,
+				AD8E4AC0BE56265D439F3AAA00BC96A8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYCache;
+			productName = YYCache;
+			productReference = 4C4C88E8469C0F7042B6645F06D2925F /* libYYCache.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4F354EC819F474A8730E3412E835084C /* Pods-LifeHelperClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCFB806324C70B934BDD1A8DBC35B743 /* Build configuration list for PBXNativeTarget "Pods-LifeHelperClient" */;
+			buildPhases = (
+				C592510525D0108CAFCCBBAA29B59666 /* Sources */,
+				D12F73EF97E02B428813A9D32BA07D3D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				063A93575E40F6ADD3E6AD8390FE25F8 /* PBXTargetDependency */,
+				CAF4F046AE6CF73AC961A0DB6DD7D22A /* PBXTargetDependency */,
+			);
+			name = "Pods-LifeHelperClient";
+			productName = "Pods-LifeHelperClient";
+			productReference = BAD378DCE08967B2B4A74D9D9E6065CD /* libPods-LifeHelperClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		93DBB6E2E022894BF97EB8B488DD2A42 /* YYModel-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546F0A658807D2C8AA39E33F3767A5C2 /* Build configuration list for PBXNativeTarget "YYModel-iOS" */;
+			buildPhases = (
+				F075C3F9A73B9F751A8C8A7F299FB734 /* Sources */,
+				9ED9529B6D5C12A586774999F4022A13 /* Frameworks */,
+				3DE54B80F85552A2DF652394BEAA065F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YYModel-iOS";
+			productName = "YYModel-iOS";
+			productReference = 406E0C3428EE77E1051F55DA00561EFB /* libYYModel-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EEAC7437ADEB47721536E5148078A088 /* YYModel-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F538D1FC46C81F440BEFBCB7292D2D58 /* Build configuration list for PBXNativeTarget "YYModel-OSX" */;
+			buildPhases = (
+				B47B8D4424DB0FD82E9DC7567732B15B /* Sources */,
+				0B947B5D2187C588AD5092E594B23F06 /* Frameworks */,
+				A44E436D19DDB5A7FDAAE0624087304D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YYModel-OSX";
+			productName = "YYModel-OSX";
+			productReference = 5462D03958A80DD2E450EBAA83740ED6 /* libYYModel-OSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F5E5C444F666B764390020DEF7780776 /* Pods-LifeHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ED05DF3F5645511BA607BE55AFB9D06 /* Build configuration list for PBXNativeTarget "Pods-LifeHelper" */;
+			buildPhases = (
+				7171745840E84090FD8CF75EE47D06AA /* Sources */,
+				5A2B1F6EEB1407B53B092AB81FB7C9CF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03D2AFD53BA441DF0A95EE4672893F60 /* PBXTargetDependency */,
+			);
+			name = "Pods-LifeHelper";
+			productName = "Pods-LifeHelper";
+			productReference = FC8504EE2FDE1C397D7C3A245B337C00 /* libPods-LifeHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 74C18EA574072259D648007BF4733B92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5E5C444F666B764390020DEF7780776 /* Pods-LifeHelper */,
+				4F354EC819F474A8730E3412E835084C /* Pods-LifeHelperClient */,
+				173F86AF5C7684CDAF0E57FD93E32F2E /* YYCache */,
+				93DBB6E2E022894BF97EB8B488DD2A42 /* YYModel-iOS */,
+				EEAC7437ADEB47721536E5148078A088 /* YYModel-OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		536F908CC244D557F5E226B38899644C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5819350F472A4D9C0530318F19EF0B62 /* YYCache-dummy.m in Sources */,
+				7793D788BC5ECC1AC214E5A2F461E729 /* YYCache.m in Sources */,
+				4DD04FD8972BFAB7C70A062D17237CB4 /* YYDiskCache.m in Sources */,
+				30610CA08EA44DC67854784EEA45E58A /* YYKVStorage.m in Sources */,
+				1E7790A7EDBAA0DB112274674FEF441D /* YYMemoryCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7171745840E84090FD8CF75EE47D06AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3A14BA0B62C6DEEF290FD3FB6692B6 /* Pods-LifeHelper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47B8D4424DB0FD82E9DC7567732B15B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95010BFBA1121A8BB143768C7CF9BE0D /* NSObject+YYModel.m in Sources */,
+				2C753796F53C8B29C2134347143C4A5D /* YYClassInfo.m in Sources */,
+				3140766BE2472750BEAC4F2B678E77DE /* YYModel-OSX-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C592510525D0108CAFCCBBAA29B59666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2A47C3003238AF9B3A3ACB734D2B385 /* Pods-LifeHelperClient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F075C3F9A73B9F751A8C8A7F299FB734 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3394C468B8FB17E5D4AE73A6F9852 /* NSObject+YYModel.m in Sources */,
+				4F71C288771AC0DB70F06954B0AA5C46 /* YYClassInfo.m in Sources */,
+				C1741492B1F638D35CE03FDB6F39FC54 /* YYModel-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03D2AFD53BA441DF0A95EE4672893F60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YYModel-OSX";
+			target = EEAC7437ADEB47721536E5148078A088 /* YYModel-OSX */;
+			targetProxy = B9BC14A744BC9860221296817BB73D36 /* PBXContainerItemProxy */;
+		};
+		063A93575E40F6ADD3E6AD8390FE25F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYCache;
+			target = 173F86AF5C7684CDAF0E57FD93E32F2E /* YYCache */;
+			targetProxy = 4484A769BEF21FD3318F318E49E58C84 /* PBXContainerItemProxy */;
+		};
+		CAF4F046AE6CF73AC961A0DB6DD7D22A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "YYModel-iOS";
+			target = 93DBB6E2E022894BF97EB8B488DD2A42 /* YYModel-iOS */;
+			targetProxy = AC922A8F974C5AE005980AC38566AE18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0744E6AE5F714303E74AB7F5DBE4B7B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D7E715577B35C02FC26E5CDE4FAE6F6 /* YYCache.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYCache/YYCache-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1B30F4DD66A448584CC00EF552DEE9E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E45B7BE25D2A476F39FEE19E3EA87567 /* Pods-LifeHelperClient.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1E9E84AA5F1874D6EF28D6DA7FB5D100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE82883710BCFB8F40817986A661852 /* YYModel-OSX.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel-OSX/YYModel-OSX-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3181DD0C9CAA938F9C6401AEBE4A1E82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6666544277FD4B274C14BDADAD8442 /* Pods-LifeHelper.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		76EEA5DC6E74779EC4DC953AB3EAAC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9775467DB2312DBD35145298C4A69EF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 429022E551AA486DDE0148B15668FC31 /* YYModel-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel-iOS/YYModel-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B24AE325341C84BA6FEBA56C0F0A18C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A9B2F4E9929EF5D1661DD0CC81B0BEC /* Pods-LifeHelper.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CE6A9DDAD8A521B2C02BE768A5BDCAB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D149798E23A89455647A03BF161F7B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE82883710BCFB8F40817986A661852 /* YYModel-OSX.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel-OSX/YYModel-OSX-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DFAE12075DD3F771CB7771B8F6716314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D7E715577B35C02FC26E5CDE4FAE6F6 /* YYCache.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYCache/YYCache-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E4EB617FE558925BA47476B96B9B506B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDBA6BD4335345409C05A6FF3173B5C2 /* Pods-LifeHelperClient.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F532E1C52313BE8A4A373BAA24AACDC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 429022E551AA486DDE0148B15668FC31 /* YYModel-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel-iOS/YYModel-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76EEA5DC6E74779EC4DC953AB3EAAC9E /* Debug */,
+				CE6A9DDAD8A521B2C02BE768A5BDCAB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ED05DF3F5645511BA607BE55AFB9D06 /* Build configuration list for PBXNativeTarget "Pods-LifeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24AE325341C84BA6FEBA56C0F0A18C1 /* Debug */,
+				3181DD0C9CAA938F9C6401AEBE4A1E82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546F0A658807D2C8AA39E33F3767A5C2 /* Build configuration list for PBXNativeTarget "YYModel-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9775467DB2312DBD35145298C4A69EF4 /* Debug */,
+				F532E1C52313BE8A4A373BAA24AACDC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FCEA6C76FAD3FC42B4969E1E1766397 /* Build configuration list for PBXNativeTarget "YYCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0744E6AE5F714303E74AB7F5DBE4B7B7 /* Debug */,
+				DFAE12075DD3F771CB7771B8F6716314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCFB806324C70B934BDD1A8DBC35B743 /* Build configuration list for PBXNativeTarget "Pods-LifeHelperClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B30F4DD66A448584CC00EF552DEE9E7 /* Debug */,
+				E4EB617FE558925BA47476B96B9B506B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F538D1FC46C81F440BEFBCB7292D2D58 /* Build configuration list for PBXNativeTarget "YYModel-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9E84AA5F1874D6EF28D6DA7FB5D100 /* Debug */,
+				D149798E23A89455647A03BF161F7B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
