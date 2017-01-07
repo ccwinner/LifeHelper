@@ -1,14 +1,14 @@
 //
-//  CXNetworkInfoModel.m
+//  CXNetworkCacheModel.m
 //  LifeHelper
 //
 //  Created by chenxiao on 2017/1/4.
 //  Copyright © 2017年 tomcc. All rights reserved.
 //
 
-#import "CXNetworkInfoModel.h"
+#import "CXNetworkCacheModel.h"
 
-@implementation CXNetworkInfoModel
+@implementation CXNetworkCacheModel
 
 - (instancetype)initWithIP:(NSString *)ipAddress
                    recPort:(int)recPort

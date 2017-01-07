@@ -1,5 +1,5 @@
 //
-//  CXNetworkInfoModel.h
+//  CXNetworkCacheModel.h
 //  LifeHelper
 //
 //  Created by chenxiao on 2017/1/4.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CXNetworkInfoModel : NSObject
+@interface CXNetworkCacheModel : NSObject
 
 @property (nonatomic, copy) NSString *ipAddress;
 @property (nonatomic, assign) int recPort;

@@ -9,8 +9,10 @@
 #import "CXSystemSettings.h"
 #import <IOKit/IOKitServer.h>
 
+const NSString *CX_EVENT_SYSTEMSETTINGS_BRIGHTNESS_UP = @"brightness_up";
+
 static float _brightness = -1.;
-static int _volumeLevel = -1.;
+static int _volumeLevel = -1;
 
 @implementation CXSystemSettings
 

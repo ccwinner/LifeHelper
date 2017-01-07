@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern const NSString *CX_EVENT_SYSTEMSETTINGS_BRIGHTNESS_UP;
+
 @interface CXSystemSettings : NSObject
 
 /**
