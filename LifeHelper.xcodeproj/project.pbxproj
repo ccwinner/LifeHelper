@@ -13,6 +13,7 @@
 		5D2D7E341E20DAB3006C4A85 /* CXNetworkEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D7E331E20DAB3006C4A85 /* CXNetworkEventModel.m */; };
 		5D2D7E351E20DAB3006C4A85 /* CXNetworkEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D7E331E20DAB3006C4A85 /* CXNetworkEventModel.m */; };
 		5D2D7E381E20E386006C4A85 /* CXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D7E371E20E386006C4A85 /* CXQueue.m */; };
+		5D4B51C31E23D9F50000E4C2 /* CXSystemSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B51C21E23D9F50000E4C2 /* CXSystemSettingsViewController.m */; };
 		5D4B837F1E1D484A0008C234 /* CXNetworkCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B837E1E1D484A0008C234 /* CXNetworkCacheModel.m */; };
 		5DC2F1D61E1D06E90003E412 /* CXNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2F1D51E1D06E90003E412 /* CXNetworkTool.m */; };
 		5DDCADDF1E18E7F400A868E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCADDE1E18E7F400A868E3 /* AppDelegate.m */; };
@@ -24,11 +25,11 @@
 		5DDCADF81E193F3900A868E3 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCADF61E193F3900A868E3 /* GCDAsyncUdpSocket.m */; };
 		5DED23FE1E19D9B50026ABFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DED23FD1E19D9B50026ABFD /* main.m */; };
 		5DED24011E19D9B50026ABFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DED24001E19D9B50026ABFD /* AppDelegate.m */; };
-		5DED24041E19D9B50026ABFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DED24031E19D9B50026ABFD /* ViewController.m */; };
 		5DED24071E19D9B50026ABFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DED24051E19D9B50026ABFD /* Main.storyboard */; };
 		5DED24091E19D9B50026ABFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DED24081E19D9B50026ABFD /* Assets.xcassets */; };
 		5DED240C1E19D9B50026ABFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DED240A1E19D9B50026ABFD /* LaunchScreen.storyboard */; };
 		5DF0C1B71E23C517004A490D /* CXNetworkDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C1B61E23C517004A490D /* CXNetworkDataParser.m */; };
+		5DF0C1BA1E23D63F004A490D /* CXHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C1B91E23D63F004A490D /* CXHomeTableViewController.m */; };
 		F33BC66824E86DEBEA433513 /* libPods-LifeHelperClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E36AA9CD18E4C1E3904F5F0 /* libPods-LifeHelperClient.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		5D2D7E361E20E386006C4A85 /* CXQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXQueue.h; sourceTree = "<group>"; };
 		5D2D7E371E20E386006C4A85 /* CXQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXQueue.m; sourceTree = "<group>"; };
 		5D2D7E391E20E8B2006C4A85 /* CXCOMMON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCOMMON.h; sourceTree = "<group>"; };
+		5D4B51C11E23D9F50000E4C2 /* CXSystemSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemSettingsViewController.h; sourceTree = "<group>"; };
+		5D4B51C21E23D9F50000E4C2 /* CXSystemSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSystemSettingsViewController.m; sourceTree = "<group>"; };
 		5D4B837D1E1D484A0008C234 /* CXNetworkCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkCacheModel.h; sourceTree = "<group>"; };
 		5D4B837E1E1D484A0008C234 /* CXNetworkCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkCacheModel.m; sourceTree = "<group>"; };
 		5D4B83811E1D491D0008C234 /* CXCONSTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCONSTS.h; sourceTree = "<group>"; };
@@ -65,14 +68,14 @@
 		5DED23FD1E19D9B50026ABFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DED23FF1E19D9B50026ABFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DED24001E19D9B50026ABFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5DED24021E19D9B50026ABFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5DED24031E19D9B50026ABFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5DED24061E19D9B50026ABFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DED24081E19D9B50026ABFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DED240B1E19D9B50026ABFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DED240D1E19D9B50026ABFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF0C1B51E23C517004A490D /* CXNetworkDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkDataParser.h; sourceTree = "<group>"; };
 		5DF0C1B61E23C517004A490D /* CXNetworkDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkDataParser.m; sourceTree = "<group>"; };
+		5DF0C1B81E23D63F004A490D /* CXHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHomeTableViewController.h; sourceTree = "<group>"; };
+		5DF0C1B91E23D63F004A490D /* CXHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHomeTableViewController.m; sourceTree = "<group>"; };
 		A4FC125F13CC2BCB4C851E96 /* Pods-LifeHelperClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeHelperClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeHelperClient/Pods-LifeHelperClient.debug.xcconfig"; sourceTree = "<group>"; };
 		B10724641ABB245ADC0A66F1 /* Pods-LifeHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeHelper/Pods-LifeHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		C6875AF63DCCC7B47E957E0E /* Pods-LifeHelperClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeHelperClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeHelperClient/Pods-LifeHelperClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,9 +208,11 @@
 			children = (
 				5DED23FF1E19D9B50026ABFD /* AppDelegate.h */,
 				5DED24001E19D9B50026ABFD /* AppDelegate.m */,
-				5DED24021E19D9B50026ABFD /* ViewController.h */,
-				5DED24031E19D9B50026ABFD /* ViewController.m */,
 				5DED24051E19D9B50026ABFD /* Main.storyboard */,
+				5DF0C1B81E23D63F004A490D /* CXHomeTableViewController.h */,
+				5DF0C1B91E23D63F004A490D /* CXHomeTableViewController.m */,
+				5D4B51C11E23D9F50000E4C2 /* CXSystemSettingsViewController.h */,
+				5D4B51C21E23D9F50000E4C2 /* CXSystemSettingsViewController.m */,
 				5DED24081E19D9B50026ABFD /* Assets.xcassets */,
 				5DED240A1E19D9B50026ABFD /* LaunchScreen.storyboard */,
 				5DED240D1E19D9B50026ABFD /* Info.plist */,
@@ -475,10 +480,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D2D7E351E20DAB3006C4A85 /* CXNetworkEventModel.m in Sources */,
-				5DED24041E19D9B50026ABFD /* ViewController.m in Sources */,
 				5D2BBB111E1EA13500C1A22B /* CXNetworkManagerServer.mm in Sources */,
 				5DED24011E19D9B50026ABFD /* AppDelegate.m in Sources */,
 				5DED23FE1E19D9B50026ABFD /* main.m in Sources */,
+				5D4B51C31E23D9F50000E4C2 /* CXSystemSettingsViewController.m in Sources */,
+				5DF0C1BA1E23D63F004A490D /* CXHomeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
