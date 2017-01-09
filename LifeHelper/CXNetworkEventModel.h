@@ -9,20 +9,22 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, CXNetworkEventType) {
-    CXNetworkEventTypeSystemSettings = 0, //CXNetworkEventTypeSettings, 比如音量, 亮度
-    CXNetworkEventTypeClickCommand = 2 //比如打开app之类的指令命令
+    CXNetworkEventTypeSettingsBrightness,
+    CXNetworkEventTypeSettingsVolum,
+    CXNetworkEventTypeClickCommand //比如打开app之类的指令命令
 };
 
-typedef NS_ENUM(NSInteger, CXNetworkEventTypeSettings) {
-    CXNetworkEventTypeSettingsBrightness,
-    CXNetworkEventTypeSettingsVolum
-};
+
+#define kNetworkEventBrightnessKeyOld (@"networkEvent.brightness.old")
+#define kNetworkEventBrightnessKeyNew (@"networkEvent.brightness.new")
+#define kNetworkEventVolumnKeyOld (@"networkEvent.volumn.old")
+#define kNetworkEventVolumnKeyNew (@"networkEvent.volumn.new")
 
 @interface CXNetworkEventModel : NSObject
 
 @property (nonatomic, assign) CXNetworkEventType eventType;
 @property (nonatomic, copy)   NSString *eventDesc;
-@property (nonatomic, strong) NSData *eventContent;
+@property (nonatomic, strong) NSDictionary *eventContent;
 
 - (instancetype)initWithEventType:(CXNetworkEventType)eventType
                         eventDesc:(NSString *)eventDesc

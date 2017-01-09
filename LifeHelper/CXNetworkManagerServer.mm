@@ -8,11 +8,9 @@
 
 #import "CXNetworkManagerServer.h"
 #import "GCDAsyncUdpSocket.h"
-#import "CXNetworkEventModel.h"
-#import <YYModel.h>
 #import "CXQueue.h"
 //settings
-#import "CXSystemSettings.h"
+#import "CXNetworkDataParser.h"
 
 CXNetworkManagerServer * CXNetworkManagerServerInstance() {
     static CXNetworkManagerServer *_instance = nil;
@@ -73,33 +71,9 @@ withFilterContext:(nullable id)filterContext {
         NSLog(@"Server receive data failed due to json serialization error");
         return;
     }
-    CXNetworkEventModel *dataModel = [CXNetworkEventModel yy_modelWithDictionary:dataDict];
-    switch (dataModel.eventType) {
-        case CXNetworkEventTypeSystemSettings:
-            [self processSystemSettings:dataModel];
-            break;
-        default:
-            break;
-    }
+    [CXNetworkDataParser parseDataDict:dataDict];
 }
 
 #pragma mark - private methods
-- (void)processSystemSettings:(CXNetworkEventModel *)data {
-    switch (data.eventType) {
-        case CXNetworkEventTypeSettingsBrightness:
-            if ([data.eventDesc isEqualToString:CX_EVENT_SYSTEMSETTINGS_BRIGHTNESS_UP]) {
-                //TODO: 获取新数值 交个CXSystemSettings 去处理
-            } else {
-                
-            }
-            break;
-            
-        default:
-            break;
-    }
-    CXDispatchToMainThread(^{
-        //
-    });
-}
 
 @end
