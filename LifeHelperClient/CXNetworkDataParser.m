@@ -8,7 +8,7 @@
 
 #import "CXNetworkDataParser.h"
 #import "CXNetworkEventModel.h"
-//#import "CXSystemSettings.h"
+#import "CXSystemSettings.h"
 #import <YYModel.h>
 
 @implementation CXNetworkDataParser
@@ -40,9 +40,7 @@
         return;
     }
     CXDispatchToMainThread(^{
-//        [CXSystemSettings setDisplayBrightness:newValue];
-        //TODO: 这种trick尽量不用
-        [NSClassFromString(@"CXSystemSettings") performSelector:@selector(setDisplayBrightness:) withObject:newValue];
+        [CXSystemSettings setDisplayBrightness:newValue];
     });
 }
 
@@ -54,8 +52,7 @@
         return;
     }
     CXDispatchToMainThread(^{
-//        [CXSystemSettings setSystemVolume:newValue];
-        [NSClassFromString(@"CXSystemSettings") performSelector:@selector(setSystemVolume:) withObject:newValue];
+        [CXSystemSettings setSystemVolume:newValue];
     });
 }
 @end

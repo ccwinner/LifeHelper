@@ -24,11 +24,16 @@
     //TODO: 先检查本地有没有设置值，有就更新UI; 否则，接收来自mac的系统设置默认值，更新UI
 }
 
-
-- (IBAction)brightnessSliderDidSlide:(id)sender {
+#pragma mark - UI
+- (IBAction)brightnessSliderDidSlide:(UISlider *)sender {
 
 }
-- (IBAction)volumnSliderDidSlide:(id)sender {
+- (IBAction)volumnSliderDidSlide:(UISlider *)sender {
+    
+}
+
+#pragma mark - private methods
+- (void)loadSettings {
     
 }
 
