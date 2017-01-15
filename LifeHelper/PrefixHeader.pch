@@ -13,6 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "CXCONSTS.h"
 #import "CXCOMMON.h"
+#import "CXTypedefBusiness.h"
 
 /*浮点数比大小*/
 #define fequal(a,b) (fabs((a) - (b)) < FLT_EPSILON)

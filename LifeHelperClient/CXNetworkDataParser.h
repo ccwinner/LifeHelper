@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-@class CXNetworkEventModel;
+
+typedef void(^completeCallback)(CXNetworkEventType type, int oldValue, int newValue);
 
 @interface CXNetworkDataParser : NSObject
 
-+ (void)parseDataDict:(NSDictionary *)dataDict;
+@property (nonatomic, strong) dispatch_queue_t callbackQueue;
+
++ (instancetype)dataParser;
+- (void)parseDataDict:(NSDictionary *)dataDict completion:(completeCallback)completion;
 
 @end

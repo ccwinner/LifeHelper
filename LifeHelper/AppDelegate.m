@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "CXNetworkTool.h"
 #import "CXNetworkCacheModel.h"
-#import "CXNetworkManagerServer.h"
+#import "CXNetworkManager.h"
+#import "CXSystemSettings.h"
 
 @interface AppDelegate ()
 
@@ -51,8 +52,16 @@
 }
 
 - (void)doPreNetworkAndStart:(CXNetworkCacheModel *)data {
-    CXNetworkManagerServerInstance().recPort = data.recPort;
-    CXNetworkManagerServerInstance().sendPort = data.sendPort;
+    CXNetworkManagerInstance().recPort = data.recPort;
+    CXNetworkManagerInstance().sendPort = data.sendPort;
+    CXNetworkManagerInstance().onReceivngDataCompletion = ^(NSInteger type, int oldValue, int newValue) {
+        if (CXNetworkEventTypeSettingsBrightness == type) {
+            [CXSystemSettings setDisplayBrightness:newValue];
+        } else if (CXNetworkEventTypeSettingsVolum == type) {
+            [CXSystemSettings setSystemVolume:newValue];
+        }
+    };
+    [CXNetworkManagerInstance() onReceivingData];
 }
 
 @end

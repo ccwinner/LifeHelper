@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B7866D718A62AA4C4137173 /* libPods-LifeHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E715D4FC4EFA98C43C7F49 /* libPods-LifeHelper.a */; };
-		5D2BBB101E1EA13500C1A22B /* CXNetworkManagerServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D2BBB0F1E1EA13500C1A22B /* CXNetworkManagerServer.mm */; };
+		5D2BBB101E1EA13500C1A22B /* CXNetworkManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D2BBB0F1E1EA13500C1A22B /* CXNetworkManager.mm */; };
 		5D2D7E341E20DAB3006C4A85 /* CXNetworkEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D7E331E20DAB3006C4A85 /* CXNetworkEventModel.m */; };
 		5D2D7E381E20E386006C4A85 /* CXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D7E371E20E386006C4A85 /* CXQueue.m */; };
 		5D4B51C31E23D9F50000E4C2 /* CXSystemSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B51C21E23D9F50000E4C2 /* CXSystemSettingsViewController.m */; };
@@ -18,6 +18,11 @@
 		5D59B6861E267E8E008A4196 /* CXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D59B6851E267E8E008A4196 /* CXQueue.m */; };
 		5D59B6921E26821D008A4196 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D59B68F1E26821D008A4196 /* GCDAsyncSocket.m */; };
 		5D59B6931E26821D008A4196 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D59B6911E26821D008A4196 /* GCDAsyncUdpSocket.m */; };
+		5D6010981E2B805A0013EEB7 /* CXNetworkCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D60108F1E2B805A0013EEB7 /* CXNetworkCacheModel.m */; };
+		5D6010991E2B805A0013EEB7 /* CXNetworkDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6010911E2B805A0013EEB7 /* CXNetworkDataParser.m */; };
+		5D60109A1E2B805A0013EEB7 /* CXNetworkEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6010931E2B805A0013EEB7 /* CXNetworkEventModel.m */; };
+		5D60109B1E2B805A0013EEB7 /* CXNetworkManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D6010951E2B805A0013EEB7 /* CXNetworkManager.mm */; };
+		5D60109C1E2B805A0013EEB7 /* CXNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6010971E2B805A0013EEB7 /* CXNetworkTool.m */; };
 		5DC2F1D61E1D06E90003E412 /* CXNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2F1D51E1D06E90003E412 /* CXNetworkTool.m */; };
 		5DDCADDF1E18E7F400A868E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCADDE1E18E7F400A868E3 /* AppDelegate.m */; };
 		5DDCADE21E18E7F400A868E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCADE11E18E7F400A868E3 /* main.m */; };
@@ -39,8 +44,8 @@
 /* Begin PBXFileReference section */
 		1E36AA9CD18E4C1E3904F5F0 /* libPods-LifeHelperClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifeHelperClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E715D4FC4EFA98C43C7F49 /* libPods-LifeHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifeHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D2BBB0E1E1EA13500C1A22B /* CXNetworkManagerServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkManagerServer.h; sourceTree = "<group>"; };
-		5D2BBB0F1E1EA13500C1A22B /* CXNetworkManagerServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXNetworkManagerServer.mm; sourceTree = "<group>"; };
+		5D2BBB0E1E1EA13500C1A22B /* CXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkManager.h; sourceTree = "<group>"; };
+		5D2BBB0F1E1EA13500C1A22B /* CXNetworkManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXNetworkManager.mm; sourceTree = "<group>"; };
 		5D2D7E321E20DAB3006C4A85 /* CXNetworkEventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkEventModel.h; sourceTree = "<group>"; };
 		5D2D7E331E20DAB3006C4A85 /* CXNetworkEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkEventModel.m; sourceTree = "<group>"; };
 		5D2D7E361E20E386006C4A85 /* CXQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXQueue.h; sourceTree = "<group>"; };
@@ -65,6 +70,18 @@
 		5D59B68F1E26821D008A4196 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		5D59B6901E26821D008A4196 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		5D59B6911E26821D008A4196 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		5D60108B1E2B7E370013EEB7 /* CXTypedefBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTypedefBusiness.h; sourceTree = "<group>"; };
+		5D60108C1E2B7FA60013EEB7 /* CXTypedefBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTypedefBusiness.h; sourceTree = "<group>"; };
+		5D60108E1E2B805A0013EEB7 /* CXNetworkCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkCacheModel.h; sourceTree = "<group>"; };
+		5D60108F1E2B805A0013EEB7 /* CXNetworkCacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkCacheModel.m; sourceTree = "<group>"; };
+		5D6010901E2B805A0013EEB7 /* CXNetworkDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkDataParser.h; sourceTree = "<group>"; };
+		5D6010911E2B805A0013EEB7 /* CXNetworkDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkDataParser.m; sourceTree = "<group>"; };
+		5D6010921E2B805A0013EEB7 /* CXNetworkEventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkEventModel.h; sourceTree = "<group>"; };
+		5D6010931E2B805A0013EEB7 /* CXNetworkEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkEventModel.m; sourceTree = "<group>"; };
+		5D6010941E2B805A0013EEB7 /* CXNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkManager.h; sourceTree = "<group>"; };
+		5D6010951E2B805A0013EEB7 /* CXNetworkManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXNetworkManager.mm; sourceTree = "<group>"; };
+		5D6010961E2B805A0013EEB7 /* CXNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkTool.h; sourceTree = "<group>"; };
+		5D6010971E2B805A0013EEB7 /* CXNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkTool.m; sourceTree = "<group>"; };
 		5DC2F1D41E1D06E90003E412 /* CXNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkTool.h; sourceTree = "<group>"; };
 		5DC2F1D51E1D06E90003E412 /* CXNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkTool.m; sourceTree = "<group>"; };
 		5DDCADDA1E18E7F400A868E3 /* LifeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				5D4B83811E1D491D0008C234 /* CXCONSTS.h */,
+				5D60108B1E2B7E370013EEB7 /* CXTypedefBusiness.h */,
 				5D4B83821E1D4AD00008C234 /* PrefixHeader.pch */,
 				5D2D7E361E20E386006C4A85 /* CXQueue.h */,
 				5D2D7E371E20E386006C4A85 /* CXQueue.m */,
@@ -186,6 +204,7 @@
 				5D59B6871E267EF5008A4196 /* CXCOMMON.h */,
 				5D59B6881E267EF5008A4196 /* CXCONSTS.h */,
 				5D59B6891E267EF5008A4196 /* PrefixHeader.pch */,
+				5D60108C1E2B7FA60013EEB7 /* CXTypedefBusiness.h */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -209,14 +228,39 @@
 			name = Dependency;
 			sourceTree = "<group>";
 		};
+		5D60108D1E2B7FBA0013EEB7 /* Netowrk */ = {
+			isa = PBXGroup;
+			children = (
+				5D60109D1E2B80830013EEB7 /* Model */,
+				5D6010901E2B805A0013EEB7 /* CXNetworkDataParser.h */,
+				5D6010911E2B805A0013EEB7 /* CXNetworkDataParser.m */,
+				5D6010941E2B805A0013EEB7 /* CXNetworkManager.h */,
+				5D6010951E2B805A0013EEB7 /* CXNetworkManager.mm */,
+				5D6010961E2B805A0013EEB7 /* CXNetworkTool.h */,
+				5D6010971E2B805A0013EEB7 /* CXNetworkTool.m */,
+			);
+			name = Netowrk;
+			sourceTree = "<group>";
+		};
+		5D60109D1E2B80830013EEB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D60108E1E2B805A0013EEB7 /* CXNetworkCacheModel.h */,
+				5D60108F1E2B805A0013EEB7 /* CXNetworkCacheModel.m */,
+				5D6010921E2B805A0013EEB7 /* CXNetworkEventModel.h */,
+				5D6010931E2B805A0013EEB7 /* CXNetworkEventModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		5DC2F1D31E1D06A70003E412 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				5D2D7E3A1E20E9B9006C4A85 /* Model */,
 				5DC2F1D41E1D06E90003E412 /* CXNetworkTool.h */,
 				5DC2F1D51E1D06E90003E412 /* CXNetworkTool.m */,
-				5D2BBB0E1E1EA13500C1A22B /* CXNetworkManagerServer.h */,
-				5D2BBB0F1E1EA13500C1A22B /* CXNetworkManagerServer.mm */,
+				5D2BBB0E1E1EA13500C1A22B /* CXNetworkManager.h */,
+				5D2BBB0F1E1EA13500C1A22B /* CXNetworkManager.mm */,
 				5DF0C1B51E23C517004A490D /* CXNetworkDataParser.h */,
 				5DF0C1B61E23C517004A490D /* CXNetworkDataParser.m */,
 			);
@@ -292,6 +336,7 @@
 			children = (
 				5DED23FF1E19D9B50026ABFD /* AppDelegate.h */,
 				5DED24001E19D9B50026ABFD /* AppDelegate.m */,
+				5D60108D1E2B7FBA0013EEB7 /* Netowrk */,
 				5D59B6951E26840F008A4196 /* Dependency */,
 				5D59B68A1E267F26008A4196 /* Util */,
 				5D59B6801E2671A8008A4196 /* View */,
@@ -553,7 +598,7 @@
 				5DDCADF81E193F3900A868E3 /* GCDAsyncUdpSocket.m in Sources */,
 				5DDCADF01E18E82400A868E3 /* CXSystemSettings.m in Sources */,
 				5DDCADE21E18E7F400A868E3 /* main.m in Sources */,
-				5D2BBB101E1EA13500C1A22B /* CXNetworkManagerServer.mm in Sources */,
+				5D2BBB101E1EA13500C1A22B /* CXNetworkManager.mm in Sources */,
 				5D4B837F1E1D484A0008C234 /* CXNetworkCacheModel.m in Sources */,
 				5DF0C1B71E23C517004A490D /* CXNetworkDataParser.m in Sources */,
 				5DDCADDF1E18E7F400A868E3 /* AppDelegate.m in Sources */,
@@ -564,14 +609,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D60109A1E2B805A0013EEB7 /* CXNetworkEventModel.m in Sources */,
+				5D60109B1E2B805A0013EEB7 /* CXNetworkManager.mm in Sources */,
 				5D59B6931E26821D008A4196 /* GCDAsyncUdpSocket.m in Sources */,
 				5D59B6791E266EE7008A4196 /* CXClientSettingsCacheModel.m in Sources */,
 				5D59B6861E267E8E008A4196 /* CXQueue.m in Sources */,
+				5D60109C1E2B805A0013EEB7 /* CXNetworkTool.m in Sources */,
 				5D59B67E1E267188008A4196 /* CXDataManager.m in Sources */,
+				5D6010981E2B805A0013EEB7 /* CXNetworkCacheModel.m in Sources */,
 				5DED24011E19D9B50026ABFD /* AppDelegate.m in Sources */,
 				5D59B6921E26821D008A4196 /* GCDAsyncSocket.m in Sources */,
 				5DED23FE1E19D9B50026ABFD /* main.m in Sources */,
 				5D4B51C31E23D9F50000E4C2 /* CXSystemSettingsViewController.m in Sources */,
+				5D6010991E2B805A0013EEB7 /* CXNetworkDataParser.m in Sources */,
 				5DF0C1BA1E23D63F004A490D /* CXHomeTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

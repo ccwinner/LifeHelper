@@ -6,29 +6,31 @@
 //  Copyright © 2017年 tomcc. All rights reserved.
 //
 
-#import "CXNetworkManagerServer.h"
+#import "CXNetworkManager.h"
 #import "GCDAsyncUdpSocket.h"
 #import "CXQueue.h"
 //settings
 #import "CXNetworkDataParser.h"
 
-CXNetworkManagerServer * CXNetworkManagerServerInstance() {
-    static CXNetworkManagerServer *_instance = nil;
+CXNetworkManager * CXNetworkManagerInstance() {
+    static CXNetworkManager *_instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [CXNetworkManagerServer new];
+        _instance = [CXNetworkManager new];
     });
     return _instance;
 }
 
-@interface CXNetworkManagerServer ()<GCDAsyncUdpSocketDelegate>
+@interface CXNetworkManager ()<GCDAsyncUdpSocketDelegate>
 
 @end
 
-@implementation CXNetworkManagerServer
+@implementation CXNetworkManager
 {
-    GCDAsyncUdpSocket *_udpSocket;
-    CXQueue            *_delegateQueue;
+    GCDAsyncUdpSocket               *_udpSocket;
+    CXQueue                         *_delegateQueue;
+    CXNetworkDataParser       *_dataParser;
+    dispatch_queue_t                _dataParsingQueue;
 }
 
 - (instancetype)init {
@@ -36,13 +38,13 @@ CXNetworkManagerServer * CXNetworkManagerServerInstance() {
         _delegateQueue = [[CXQueue alloc] initWithName:"com.tomcc.server.delegateQueue"];
         _udpSocket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self
                                                    delegateQueue:_delegateQueue.nativeQueue];
-        [self commonSetup];
+        _dataParser = [CXNetworkDataParser dataParser];
+        _dataParsingQueue = dispatch_queue_create("com.tomcc.serverNetwork.dataParser_Queue", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
 
-- (void)commonSetup {
-
+- (void)onReceivingData {
     //socket
     NSError *error = nil;
     _udpSocket.maxReceiveIPv4BufferSize = 65535; //来自头文件的说明,为了兼容, 取UINT16
@@ -71,7 +73,10 @@ withFilterContext:(nullable id)filterContext {
         NSLog(@"Server receive data failed due to json serialization error");
         return;
     }
-    [CXNetworkDataParser parseDataDict:dataDict];
+    //TODO:如果能包装出一个带发送成功后的回调的方法就好
+    dispatch_async(_dataParsingQueue, ^{
+        [_dataParser parseDataDict:dataDict completion:self.onReceivngDataCompletion];
+    });
 }
 
 #pragma mark - private methods
