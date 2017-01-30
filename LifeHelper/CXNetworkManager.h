@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class CXNetworkManager;
+@class CXNetworkManager, CXNetworkEventModel;
 
 FOUNDATION_EXPORT CXNetworkManager* CXNetworkManagerInstance();
 
@@ -16,11 +15,12 @@ FOUNDATION_EXPORT CXNetworkManager* CXNetworkManagerInstance();
 
 @property (nonatomic, assign) int recPort;
 @property (nonatomic, assign) int sendPort;
-@property (nonatomic, copy) void (^onReceivngDataCompletion)(CXNetworkEventType type, int oldValue, int newValue);
+@property (nonatomic, copy) NSString *sendAddress;
 
 /**
  主动监听接收数据
  */
 - (void)onReceivingData;
-
+- (void)setOnReceivngDataCompletion:(void (^)(CXNetworkEventType type, float oldValue, float newValue))onReceivngDataCompletion;
+- (void)sendModel:(CXNetworkEventModel *)model;
 @end

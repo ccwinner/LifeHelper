@@ -9,16 +9,17 @@
 #import <Foundation/Foundation.h>
 @class CXClientSettingsCacheModel;
 
-#define CX_DataManager [CXDataManager sharedManager]
+#define CX_DataManager ([CXDataManager sharedManager])
 
 @interface CXDataManager : NSObject
 
 + (instancetype)sharedManager;
 
-/**
- 加载设置数据，比如亮度，音量等设置
+//network
+- (void)prepareForNetworkConnection;
+- (void)connectToHost;
+- (void)sendModel:(id)model;
 
- @return 模型
- */
-- (CXClientSettingsCacheModel *)loadData;
+//cache
+- (void)storeData;
 @end

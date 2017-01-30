@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CXNetworkManager;
+@class CXNetworkManager, CXNetworkEventModel;
 
 FOUNDATION_EXPORT CXNetworkManager* CXNetworkManagerInstance();
 
@@ -16,11 +16,18 @@ FOUNDATION_EXPORT CXNetworkManager* CXNetworkManagerInstance();
 
 @property (nonatomic, assign) int recPort;
 @property (nonatomic, assign) int sendPort;
+@property (nonatomic, copy) NSString *sendAddress;
 @property (nonatomic, copy) void (^onReceivngDataCompletion)(CXNetworkEventType type, int oldValue, int newValue);
 
 /**
- 主动监听接收数据
+ host端主动监听接收数据
  */
 - (void)onReceivingData;
 
+/**
+ 发送数据
+
+ @param model shuju
+ */
+- (void)sendModel:(CXNetworkEventModel *)model;
 @end

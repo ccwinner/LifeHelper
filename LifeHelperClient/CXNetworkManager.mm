@@ -11,6 +11,8 @@
 #import "CXQueue.h"
 //settings
 #import "CXNetworkDataParser.h"
+#import "CXNetworkEventModel.h"
+#import <YYModel.h>
 
 CXNetworkManager * CXNetworkManagerInstance() {
     static CXNetworkManager *_instance = nil;
@@ -49,14 +51,17 @@ CXNetworkManager * CXNetworkManagerInstance() {
     NSError *error = nil;
     _udpSocket.maxReceiveIPv4BufferSize = 65535; //来自头文件的说明,为了兼容, 取UINT16
     [_udpSocket bindToPort:_recPort error:&error];
-    NSAssert(error == nil, @"服务端绑定端口居然他妈的失败了");
+    NSAssert(error == nil, @"绑定端口居然他妈的失败了");
     error = nil;
     [_udpSocket beginReceiving:&error];
     NSAssert(error == nil, @"无法持续接收信息");
 }
 
-- (void)sendData {
-    
+#pragma mark - send data
+- (void)sendModel:(CXNetworkEventModel *)model {
+    NSData *data = [model yy_modelToJSONData];
+    NSString *sendIP = @"192.168.1.105";
+    [_udpSocket sendData:data toHost:sendIP port:_sendPort withTimeout:0 tag:0];
 }
 
 #pragma mark - GCDAsyncUdpSocketDelegate

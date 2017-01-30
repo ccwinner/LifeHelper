@@ -11,6 +11,8 @@
 #import "CXQueue.h"
 //settings
 #import "CXNetworkDataParser.h"
+#import "CXNetworkEventModel.h"
+#import <YYModel.h>
 
 CXNetworkManager * CXNetworkManagerInstance() {
     static CXNetworkManager *_instance = nil;
@@ -23,13 +25,15 @@ CXNetworkManager * CXNetworkManagerInstance() {
 
 @interface CXNetworkManager ()<GCDAsyncUdpSocketDelegate>
 
+@property (nonatomic, copy) void (^onReceivngDataCompletion)(CXNetworkEventType type, float oldValue, float newValue);
+
 @end
 
 @implementation CXNetworkManager
 {
     GCDAsyncUdpSocket               *_udpSocket;
     CXQueue                         *_delegateQueue;
-    CXNetworkDataParser       *_dataParser;
+    CXNetworkDataParser             *_dataParser;
     dispatch_queue_t                _dataParsingQueue;
 }
 
@@ -55,8 +59,15 @@ CXNetworkManager * CXNetworkManagerInstance() {
     NSAssert(error == nil, @"无法持续接收信息");
 }
 
-- (void)sendData {
-    
+#pragma mark - send data
+- (void)sendModel:(CXNetworkEventModel *)model {
+    NSData *data = [model yy_modelToJSONData];
+    [_udpSocket sendData:data toHost:_sendAddress port:_sendPort withTimeout:0 tag:0];
+}
+
+#pragma mark - setters
+- (void)setOnReceivngDataCompletion:(void (^)(CXNetworkEventType, float, float))onReceivngDataCompletion {
+    _onReceivngDataCompletion = [onReceivngDataCompletion copy];
 }
 
 #pragma mark - GCDAsyncUdpSocketDelegate

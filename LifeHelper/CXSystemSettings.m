@@ -11,12 +11,12 @@
 
 const NSString *CX_EVENT_SYSTEMSETTINGS_BRIGHTNESS_UP = @"brightness_up";
 
-static int _brightness = -1.;
+static float _brightness = -1.;
 static int _volumeLevel = -1;
 
 @implementation CXSystemSettings
 
-+ (void)setDisplayBrightness:(int)level {
++ (void)setDisplayBrightness:(float)level {
     io_iterator_t iterator;
     kern_return_t result = IOServiceGetMatchingServices(kIOMasterPortDefault, IOServiceMatching("IODisplayConnect"), &iterator);
     if (result == kIOReturnSuccess) {
@@ -30,7 +30,7 @@ static int _volumeLevel = -1;
     }
 }
 
-+ (int)displayBrightness {
++ (float)displayBrightness {
     if (_brightness != -1) {
         return _brightness;
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BVl-4j-ffz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BVl-4j-ffz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,9 +37,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection id="dyo-eg-a0t">
+                            <tableViewSection id="5k7-gO-p3V">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="iwg-EW-6uq" style="IBUITableViewCellStyleDefault" id="QAk-Wi-7Ox">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="iwg-EW-6uq" style="IBUITableViewCellStyleDefault" id="QAk-Wi-7Ox" customClass="CXClientSettingsCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QAk-Wi-7Ox" id="Bhi-H1-QXa">
@@ -59,7 +59,7 @@
                                             <segue destination="HKe-Nc-xZo" kind="show" id="j6C-ry-uFT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="K8r-4v-Mht" style="IBUITableViewCellStyleDefault" id="x0y-Wg-H0z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="K8r-4v-Mht" style="IBUITableViewCellStyleDefault" id="x0y-Wg-H0z" customClass="CXClientCommandCell">
                                         <rect key="frame" x="0.0" y="60" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x0y-Wg-H0z" id="nFf-hf-4Dj">
@@ -76,7 +76,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="wWy-zE-1Du" style="IBUITableViewCellStyleDefault" id="vMN-e8-hw4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="wWy-zE-1Du" style="IBUITableViewCellStyleDefault" id="vMN-e8-hw4" customClass="CXClientCommandCell">
                                         <rect key="frame" x="0.0" y="120" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vMN-e8-hw4" id="Kgz-wZ-yZk">
@@ -147,6 +147,17 @@
                                     <action selector="volumnSliderDidSlide:" destination="HKe-Nc-xZo" eventType="valueChanged" id="N2q-VT-mfi"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1X-qw-bSx">
+                                <rect key="frame" x="33" y="318" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="hHY-cr-0VK"/>
+                                    <constraint firstAttribute="height" constant="30" id="rmZ-h7-eM8"/>
+                                </constraints>
+                                <state key="normal" title="测试发送亮度"/>
+                                <connections>
+                                    <action selector="doSentBrightnessTest:" destination="HKe-Nc-xZo" eventType="touchUpInside" id="ehS-Wv-pXn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -154,6 +165,7 @@
                             <constraint firstItem="fvL-zq-haU" firstAttribute="top" secondItem="yIU-59-cUR" secondAttribute="bottom" constant="84" id="4Bk-Te-NL9"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="top" secondItem="VTn-ls-cMD" secondAttribute="bottom" constant="41" id="5C0-C4-bkW"/>
                             <constraint firstItem="4dR-ke-dk3" firstAttribute="width" secondItem="fvL-zq-haU" secondAttribute="width" constant="-108" id="7CT-d7-p7f"/>
+                            <constraint firstItem="J1X-qw-bSx" firstAttribute="leading" secondItem="fCa-7o-tYU" secondAttribute="leading" id="7KL-UE-pVf"/>
                             <constraint firstItem="fvL-zq-haU" firstAttribute="leading" secondItem="VTn-ls-cMD" secondAttribute="trailing" constant="19" id="APp-Oi-Kpk"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="width" secondItem="VTn-ls-cMD" secondAttribute="width" id="CYh-d8-VA0"/>
                             <constraint firstItem="4dR-ke-dk3" firstAttribute="height" secondItem="fvL-zq-haU" secondAttribute="height" id="GHg-tB-Kag"/>
@@ -161,12 +173,14 @@
                             <constraint firstItem="4dR-ke-dk3" firstAttribute="centerY" secondItem="fCa-7o-tYU" secondAttribute="centerY" id="ZSu-qd-IVg"/>
                             <constraint firstItem="VTn-ls-cMD" firstAttribute="leading" secondItem="Zd0-eU-9WJ" secondAttribute="leadingMargin" constant="17" id="dKM-cX-7tk"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="height" secondItem="VTn-ls-cMD" secondAttribute="height" id="faD-mE-A9q"/>
+                            <constraint firstItem="J1X-qw-bSx" firstAttribute="top" secondItem="fCa-7o-tYU" secondAttribute="bottom" constant="82" id="ixE-Fx-Bwi"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="leading" secondItem="VTn-ls-cMD" secondAttribute="leading" id="vfc-kb-5ZS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="系统设置" id="A88-qy-0U7"/>
                     <connections>
                         <outlet property="brightnessSlider" destination="fvL-zq-haU" id="iAI-R2-LVh"/>
+                        <outlet property="testSendBrightness" destination="J1X-qw-bSx" id="zrB-3U-8Zg"/>
                         <outlet property="volumnSlider" destination="4dR-ke-dk3" id="xOF-yI-yme"/>
                     </connections>
                 </viewController>

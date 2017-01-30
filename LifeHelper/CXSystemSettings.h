@@ -17,14 +17,14 @@ extern const NSString *CX_EVENT_SYSTEMSETTINGS_BRIGHTNESS_UP;
 
  @param level 1 最大
  */
-+ (void)setDisplayBrightness:(int)level;
++ (void)setDisplayBrightness:(float)level;
 
 /**
  屏幕亮度
 
  @return 亮度
  */
-+ (int)displayBrightness;
++ (float)displayBrightness;
 
 /**
  设置系统声音

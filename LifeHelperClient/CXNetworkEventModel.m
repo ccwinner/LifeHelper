@@ -12,7 +12,7 @@
 
 - (instancetype)initWithEventType:(CXNetworkEventType)eventType
                         eventDesc:(NSString *)eventDesc
-                     eventContent:(NSData *)eventContent{
+                     eventContent:(NSDictionary *)eventContent{
     if (self = [super init]) {
         _eventType = eventType;
         _eventDesc = eventDesc;

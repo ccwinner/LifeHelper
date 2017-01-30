@@ -27,21 +27,30 @@
     //TODO: 获取并显示界面上的本机 ip_address, send_port, rec_port
     CXNetworkCacheModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:CX_ARCHIEVED_NETINFO_FILE];
     if (!model) {
+//    CXNetworkCacheModel *model = nil;
         NSString *hostAddr = [CXNetworkTool hostIpAddress];
         model = [[CXNetworkCacheModel alloc] initWithIP:hostAddr
                                                recPort:CX_SERVER_REC_PORT
-                                              sendPort:0];
-        [NSKeyedArchiver archiveRootObject:model toFile:CX_ARCHIEVED_NETINFO_FILE];
+                                              sendPort:CX_CLIENT_REC_PORT];
+      //  [NSKeyedArchiver archiveRootObject:model toFile:CX_ARCHIEVED_NETINFO_FILE];
     }
     [self loadViews:model];
     //TODO: 网络连接准备
     [self doPreNetworkAndStart:model];
+//    [[NSWorkspace sharedWorkspace].notificationCenter addObserver:self
+//                                                         selector:@selector(listNotifis:)
+//                                                             name:nil
+//                                                           object:nil];
 }
 
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
+
+//- (void)listNotifis:(NSNotification *)notification {
+//    NSLog(@"%@ : %@", notification.name, notification.object);
+//}
 
 #pragma mark - private methods
 - (void)loadViews: (CXNetworkCacheModel *)data {
@@ -54,12 +63,13 @@
 - (void)doPreNetworkAndStart:(CXNetworkCacheModel *)data {
     CXNetworkManagerInstance().recPort = data.recPort;
     CXNetworkManagerInstance().sendPort = data.sendPort;
-    CXNetworkManagerInstance().onReceivngDataCompletion = ^(NSInteger type, int oldValue, int newValue) {
+    CXNetworkManagerInstance().onReceivngDataCompletion = ^(NSInteger type, float oldValue, float newValue) {
         if (CXNetworkEventTypeSettingsBrightness == type) {
             [CXSystemSettings setDisplayBrightness:newValue];
         } else if (CXNetworkEventTypeSettingsVolum == type) {
             [CXSystemSettings setSystemVolume:newValue];
         }
+        self.iPAddressLabel.stringValue = @"收到了";
     };
     [CXNetworkManagerInstance() onReceivingData];
 }

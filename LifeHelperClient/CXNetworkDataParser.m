@@ -11,8 +11,8 @@
 #import <YYModel.h>
 
 typedef struct {
-    int oldValue;
-    int newValue;
+    float oldValue;
+    float newValue;
 } CXNetworkDataParserDataTuple;
 
 @implementation CXNetworkDataParser

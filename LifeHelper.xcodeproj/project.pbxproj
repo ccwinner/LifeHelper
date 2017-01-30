@@ -11,6 +11,7 @@
 		5D2BBB101E1EA13500C1A22B /* CXNetworkManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D2BBB0F1E1EA13500C1A22B /* CXNetworkManager.mm */; };
 		5D2D7E341E20DAB3006C4A85 /* CXNetworkEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D7E331E20DAB3006C4A85 /* CXNetworkEventModel.m */; };
 		5D2D7E381E20E386006C4A85 /* CXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D7E371E20E386006C4A85 /* CXQueue.m */; };
+		5D44F98B1E33198800C0FC6D /* CXBreakPointDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D44F98A1E33198800C0FC6D /* CXBreakPointDebugger.m */; };
 		5D4B51C31E23D9F50000E4C2 /* CXSystemSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B51C21E23D9F50000E4C2 /* CXSystemSettingsViewController.m */; };
 		5D4B837F1E1D484A0008C234 /* CXNetworkCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B837E1E1D484A0008C234 /* CXNetworkCacheModel.m */; };
 		5D59B6791E266EE7008A4196 /* CXClientSettingsCacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D59B6781E266EE7008A4196 /* CXClientSettingsCacheModel.m */; };
@@ -24,6 +25,8 @@
 		5D60109B1E2B805A0013EEB7 /* CXNetworkManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D6010951E2B805A0013EEB7 /* CXNetworkManager.mm */; };
 		5D60109C1E2B805A0013EEB7 /* CXNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6010971E2B805A0013EEB7 /* CXNetworkTool.m */; };
 		5DC2F1D61E1D06E90003E412 /* CXNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2F1D51E1D06E90003E412 /* CXNetworkTool.m */; };
+		5DC44D4F1E3D99BF00346C5B /* CXClientSettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC44D4E1E3D99BF00346C5B /* CXClientSettingsCell.m */; };
+		5DC44D521E3D99F600346C5B /* CXClientCommandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC44D511E3D99F600346C5B /* CXClientCommandCell.m */; };
 		5DDCADDF1E18E7F400A868E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCADDE1E18E7F400A868E3 /* AppDelegate.m */; };
 		5DDCADE21E18E7F400A868E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCADE11E18E7F400A868E3 /* main.m */; };
 		5DDCADE41E18E7F400A868E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCADE31E18E7F400A868E3 /* Assets.xcassets */; };
@@ -38,6 +41,7 @@
 		5DED240C1E19D9B50026ABFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DED240A1E19D9B50026ABFD /* LaunchScreen.storyboard */; };
 		5DF0C1B71E23C517004A490D /* CXNetworkDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C1B61E23C517004A490D /* CXNetworkDataParser.m */; };
 		5DF0C1BA1E23D63F004A490D /* CXHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0C1B91E23D63F004A490D /* CXHomeTableViewController.m */; };
+		5DFB07171E3B34A7009AA1DC /* CXClientCacheDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB07161E3B34A7009AA1DC /* CXClientCacheDataHelper.m */; };
 		F33BC66824E86DEBEA433513 /* libPods-LifeHelperClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E36AA9CD18E4C1E3904F5F0 /* libPods-LifeHelperClient.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,8 @@
 		5D2D7E361E20E386006C4A85 /* CXQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXQueue.h; sourceTree = "<group>"; };
 		5D2D7E371E20E386006C4A85 /* CXQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXQueue.m; sourceTree = "<group>"; };
 		5D2D7E391E20E8B2006C4A85 /* CXCOMMON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCOMMON.h; sourceTree = "<group>"; };
+		5D44F9891E33198800C0FC6D /* CXBreakPointDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBreakPointDebugger.h; sourceTree = "<group>"; };
+		5D44F98A1E33198800C0FC6D /* CXBreakPointDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXBreakPointDebugger.m; sourceTree = "<group>"; };
 		5D4B51C11E23D9F50000E4C2 /* CXSystemSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSystemSettingsViewController.h; sourceTree = "<group>"; };
 		5D4B51C21E23D9F50000E4C2 /* CXSystemSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSystemSettingsViewController.m; sourceTree = "<group>"; };
 		5D4B837D1E1D484A0008C234 /* CXNetworkCacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkCacheModel.h; sourceTree = "<group>"; };
@@ -84,6 +90,10 @@
 		5D6010971E2B805A0013EEB7 /* CXNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkTool.m; sourceTree = "<group>"; };
 		5DC2F1D41E1D06E90003E412 /* CXNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkTool.h; sourceTree = "<group>"; };
 		5DC2F1D51E1D06E90003E412 /* CXNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkTool.m; sourceTree = "<group>"; };
+		5DC44D4D1E3D99BF00346C5B /* CXClientSettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXClientSettingsCell.h; sourceTree = "<group>"; };
+		5DC44D4E1E3D99BF00346C5B /* CXClientSettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClientSettingsCell.m; sourceTree = "<group>"; };
+		5DC44D501E3D99F600346C5B /* CXClientCommandCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXClientCommandCell.h; sourceTree = "<group>"; };
+		5DC44D511E3D99F600346C5B /* CXClientCommandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClientCommandCell.m; sourceTree = "<group>"; };
 		5DDCADDA1E18E7F400A868E3 /* LifeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DDCADDD1E18E7F400A868E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DDCADDE1E18E7F400A868E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -109,6 +119,8 @@
 		5DF0C1B61E23C517004A490D /* CXNetworkDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNetworkDataParser.m; sourceTree = "<group>"; };
 		5DF0C1B81E23D63F004A490D /* CXHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHomeTableViewController.h; sourceTree = "<group>"; };
 		5DF0C1B91E23D63F004A490D /* CXHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHomeTableViewController.m; sourceTree = "<group>"; };
+		5DFB07151E3B34A7009AA1DC /* CXClientCacheDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXClientCacheDataHelper.h; sourceTree = "<group>"; };
+		5DFB07161E3B34A7009AA1DC /* CXClientCacheDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXClientCacheDataHelper.m; sourceTree = "<group>"; };
 		A4FC125F13CC2BCB4C851E96 /* Pods-LifeHelperClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeHelperClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeHelperClient/Pods-LifeHelperClient.debug.xcconfig"; sourceTree = "<group>"; };
 		B10724641ABB245ADC0A66F1 /* Pods-LifeHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LifeHelper/Pods-LifeHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		C6875AF63DCCC7B47E957E0E /* Pods-LifeHelperClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeHelperClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-LifeHelperClient/Pods-LifeHelperClient.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +196,8 @@
 			children = (
 				5D59B67C1E267188008A4196 /* CXDataManager.h */,
 				5D59B67D1E267188008A4196 /* CXDataManager.m */,
+				5DFB07151E3B34A7009AA1DC /* CXClientCacheDataHelper.h */,
+				5DFB07161E3B34A7009AA1DC /* CXClientCacheDataHelper.m */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
@@ -192,6 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				5DED24051E19D9B50026ABFD /* Main.storyboard */,
+				5DC44D4D1E3D99BF00346C5B /* CXClientSettingsCell.h */,
+				5DC44D4E1E3D99BF00346C5B /* CXClientSettingsCell.m */,
+				5DC44D501E3D99F600346C5B /* CXClientCommandCell.h */,
+				5DC44D511E3D99F600346C5B /* CXClientCommandCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -205,6 +223,8 @@
 				5D59B6881E267EF5008A4196 /* CXCONSTS.h */,
 				5D59B6891E267EF5008A4196 /* PrefixHeader.pch */,
 				5D60108C1E2B7FA60013EEB7 /* CXTypedefBusiness.h */,
+				5D44F9891E33198800C0FC6D /* CXBreakPointDebugger.h */,
+				5D44F98A1E33198800C0FC6D /* CXBreakPointDebugger.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -609,18 +629,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC44D4F1E3D99BF00346C5B /* CXClientSettingsCell.m in Sources */,
 				5D60109A1E2B805A0013EEB7 /* CXNetworkEventModel.m in Sources */,
 				5D60109B1E2B805A0013EEB7 /* CXNetworkManager.mm in Sources */,
 				5D59B6931E26821D008A4196 /* GCDAsyncUdpSocket.m in Sources */,
 				5D59B6791E266EE7008A4196 /* CXClientSettingsCacheModel.m in Sources */,
 				5D59B6861E267E8E008A4196 /* CXQueue.m in Sources */,
 				5D60109C1E2B805A0013EEB7 /* CXNetworkTool.m in Sources */,
+				5DC44D521E3D99F600346C5B /* CXClientCommandCell.m in Sources */,
 				5D59B67E1E267188008A4196 /* CXDataManager.m in Sources */,
 				5D6010981E2B805A0013EEB7 /* CXNetworkCacheModel.m in Sources */,
 				5DED24011E19D9B50026ABFD /* AppDelegate.m in Sources */,
 				5D59B6921E26821D008A4196 /* GCDAsyncSocket.m in Sources */,
 				5DED23FE1E19D9B50026ABFD /* main.m in Sources */,
 				5D4B51C31E23D9F50000E4C2 /* CXSystemSettingsViewController.m in Sources */,
+				5DFB07171E3B34A7009AA1DC /* CXClientCacheDataHelper.m in Sources */,
+				5D44F98B1E33198800C0FC6D /* CXBreakPointDebugger.m in Sources */,
 				5D6010991E2B805A0013EEB7 /* CXNetworkDataParser.m in Sources */,
 				5DF0C1BA1E23D63F004A490D /* CXHomeTableViewController.m in Sources */,
 			);
@@ -784,7 +808,7 @@
 				DEVELOPMENT_TEAM = FC99DXGWE9;
 				GCC_PREFIX_HEADER = ./LifeHelperClient/PrefixHeader.pch;
 				INFOPLIST_FILE = LifeHelperClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomcc.LifeHelperClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -802,7 +826,7 @@
 				DEVELOPMENT_TEAM = FC99DXGWE9;
 				GCC_PREFIX_HEADER = ./LifeHelperClient/PrefixHeader.pch;
 				INFOPLIST_FILE = LifeHelperClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomcc.LifeHelperClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";

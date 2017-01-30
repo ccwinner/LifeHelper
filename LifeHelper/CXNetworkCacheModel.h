@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CXNetworkCacheModel : NSObject
+@interface CXNetworkCacheModel : NSObject<NSCoding>
 
 @property (nonatomic, copy) NSString *ipAddress;
 @property (nonatomic, assign) int recPort;

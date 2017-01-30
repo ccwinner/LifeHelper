@@ -21,4 +21,16 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    _ipAddress = [aDecoder decodeObjectForKey:@"ipAddress"];
+    _recPort = (int)[aDecoder decodeIntegerForKey:@"recPort"];
+    _sendPort = (int)[aDecoder decodeIntegerForKey:@"sendPort"];
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:_ipAddress forKey:@"ipAddress"];
+    [aCoder encodeInteger:_recPort forKey:@"recPort"];
+    [aCoder encodeInteger:_sendPort forKey:@"sendPort"];
+}
 @end

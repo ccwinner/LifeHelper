@@ -21,5 +21,5 @@
 
 - (instancetype)initWithEventType:(CXNetworkEventType)eventType
                         eventDesc:(NSString *)eventDesc
-                     eventContent:(NSData *)eventContent;
+                     eventContent:(NSDictionary *)eventContent;
 @end
