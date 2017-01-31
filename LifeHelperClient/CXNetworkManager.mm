@@ -60,8 +60,7 @@ CXNetworkManager * CXNetworkManagerInstance() {
 #pragma mark - send data
 - (void)sendModel:(CXNetworkEventModel *)model {
     NSData *data = [model yy_modelToJSONData];
-    NSString *sendIP = @"192.168.1.105";
-    [_udpSocket sendData:data toHost:sendIP port:_sendPort withTimeout:0 tag:0];
+    [_udpSocket sendData:data toHost:_sendAddress port:_sendPort withTimeout:0 tag:0];
 }
 
 #pragma mark - GCDAsyncUdpSocketDelegate

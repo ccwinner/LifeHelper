@@ -17,7 +17,7 @@ FOUNDATION_EXPORT CXNetworkManager* CXNetworkManagerInstance();
 @property (nonatomic, assign) int recPort;
 @property (nonatomic, assign) int sendPort;
 @property (nonatomic, copy) NSString *sendAddress;
-@property (nonatomic, copy) void (^onReceivngDataCompletion)(CXNetworkEventType type, int oldValue, int newValue);
+@property (nonatomic, copy) void (^onReceivngDataCompletion)(CXNetworkEventType type, float oldValue, float newValue);
 
 /**
  host端主动监听接收数据

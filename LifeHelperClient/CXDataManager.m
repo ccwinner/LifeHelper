@@ -13,6 +13,7 @@
 #import "CXClientCacheDataHelper.h"
 //network
 #import "CXNetworkManager.h"
+#import "CXNetworkTool.h"
 
 @implementation CXDataManager
 {
@@ -40,7 +41,7 @@
 - (void)prepareForNetworkConnection {
     CXNetworkManagerInstance().sendPort = CX_SERVER_REC_PORT;
     CXNetworkManagerInstance().recPort = CX_CLIENT_REC_PORT;
-    [CXNetworkManagerInstance() setOnReceivngDataCompletion:^(CXNetworkEventType type, int oldValue, int newValue) {
+    [CXNetworkManagerInstance() setOnReceivngDataCompletion:^(CXNetworkEventType type, float oldValue, float newValue) {
         int params[] = {type, oldValue, newValue};
         [self processDataAndInformUI:params];
     }];
@@ -52,6 +53,10 @@
 
 - (void)sendModel:(id)model {
     [CXNetworkManagerInstance() sendModel:model];
+}
+
+- (NSString *)ipAddress {
+    return [CXNetworkTool ipAddress];
 }
 
 #pragma mark - cache methods

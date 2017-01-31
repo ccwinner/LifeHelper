@@ -16,7 +16,7 @@
 
 @implementation CXNetworkTool
 
-+ (NSString *)hostIpAddress {
++ (NSString *)ipAddress {
     //comes frome http://stackoverflow.com/questions/7072989/iphone-ipad-osx-how-to-get-my-ip-address-programmatically
     
     NSMutableDictionary *addresses = [NSMutableDictionary new];

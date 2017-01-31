@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fvL-zq-haU">
-                                <rect key="frame" x="120" y="148" width="226" height="31"/>
+                                <rect key="frame" x="120" y="264" width="226" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZLm-mQ-blx"/>
                                     <constraint firstAttribute="width" constant="222" id="uCm-4T-u6q"/>
@@ -130,57 +130,73 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="屏幕亮度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTn-ls-cMD">
-                                <rect key="frame" x="33" y="153" width="70" height="21"/>
+                                <rect key="frame" x="33" y="269" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统音量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCa-7o-tYU">
-                                <rect key="frame" x="33" y="215" width="70" height="21"/>
+                                <rect key="frame" x="33" y="331" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-ke-dk3">
-                                <rect key="frame" x="140" y="210" width="118" height="31"/>
+                                <rect key="frame" x="120" y="326" width="226" height="31"/>
                                 <connections>
                                     <action selector="volumnSliderDidSlide:" destination="HKe-Nc-xZo" eventType="valueChanged" id="N2q-VT-mfi"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1X-qw-bSx">
-                                <rect key="frame" x="33" y="318" width="92" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入发送者的ip地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Xa-YJ-tmJ">
+                                <rect key="frame" x="89" y="169" width="167" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机的ip地址是：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQT-Yz-92e">
+                                <rect key="frame" x="89" y="219" width="136" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="hHY-cr-0VK"/>
-                                    <constraint firstAttribute="height" constant="30" id="rmZ-h7-eM8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="Bgg-vJ-eOH"/>
+                                    <constraint firstAttribute="height" constant="21" id="cgc-h0-0ij"/>
                                 </constraints>
-                                <state key="normal" title="测试发送亮度"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbI-JZ-lIH">
+                                <rect key="frame" x="284" y="168" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="确定"/>
                                 <connections>
-                                    <action selector="doSentBrightnessTest:" destination="HKe-Nc-xZo" eventType="touchUpInside" id="ehS-Wv-pXn"/>
+                                    <action selector="confirmBtnDidClicked:" destination="HKe-Nc-xZo" eventType="touchUpInside" id="5iZ-D8-cKd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4dR-ke-dk3" firstAttribute="leading" secondItem="fvL-zq-haU" secondAttribute="leading" constant="20" id="0dX-DZ-z8h"/>
-                            <constraint firstItem="fvL-zq-haU" firstAttribute="top" secondItem="yIU-59-cUR" secondAttribute="bottom" constant="84" id="4Bk-Te-NL9"/>
+                            <constraint firstItem="fvL-zq-haU" firstAttribute="top" secondItem="yIU-59-cUR" secondAttribute="bottom" constant="200" id="4Bk-Te-NL9"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="top" secondItem="VTn-ls-cMD" secondAttribute="bottom" constant="41" id="5C0-C4-bkW"/>
-                            <constraint firstItem="4dR-ke-dk3" firstAttribute="width" secondItem="fvL-zq-haU" secondAttribute="width" constant="-108" id="7CT-d7-p7f"/>
-                            <constraint firstItem="J1X-qw-bSx" firstAttribute="leading" secondItem="fCa-7o-tYU" secondAttribute="leading" id="7KL-UE-pVf"/>
                             <constraint firstItem="fvL-zq-haU" firstAttribute="leading" secondItem="VTn-ls-cMD" secondAttribute="trailing" constant="19" id="APp-Oi-Kpk"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="width" secondItem="VTn-ls-cMD" secondAttribute="width" id="CYh-d8-VA0"/>
-                            <constraint firstItem="4dR-ke-dk3" firstAttribute="height" secondItem="fvL-zq-haU" secondAttribute="height" id="GHg-tB-Kag"/>
+                            <constraint firstItem="4dR-ke-dk3" firstAttribute="leading" secondItem="fCa-7o-tYU" secondAttribute="trailing" constant="19" id="F7M-s3-T0q"/>
+                            <constraint firstItem="1Xa-YJ-tmJ" firstAttribute="leading" secondItem="HQT-Yz-92e" secondAttribute="leading" id="IkB-Qk-GMX"/>
+                            <constraint firstItem="4dR-ke-dk3" firstAttribute="width" secondItem="fvL-zq-haU" secondAttribute="width" id="Len-l3-Gjk"/>
+                            <constraint firstItem="VTn-ls-cMD" firstAttribute="top" secondItem="HQT-Yz-92e" secondAttribute="bottom" constant="29" id="Lvv-6I-m9R"/>
                             <constraint firstItem="fvL-zq-haU" firstAttribute="centerY" secondItem="VTn-ls-cMD" secondAttribute="centerY" id="SvV-IZ-5p2"/>
-                            <constraint firstItem="4dR-ke-dk3" firstAttribute="centerY" secondItem="fCa-7o-tYU" secondAttribute="centerY" id="ZSu-qd-IVg"/>
                             <constraint firstItem="VTn-ls-cMD" firstAttribute="leading" secondItem="Zd0-eU-9WJ" secondAttribute="leadingMargin" constant="17" id="dKM-cX-7tk"/>
+                            <constraint firstItem="4dR-ke-dk3" firstAttribute="top" secondItem="fvL-zq-haU" secondAttribute="bottom" constant="32" id="ep1-i1-REm"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="height" secondItem="VTn-ls-cMD" secondAttribute="height" id="faD-mE-A9q"/>
-                            <constraint firstItem="J1X-qw-bSx" firstAttribute="top" secondItem="fCa-7o-tYU" secondAttribute="bottom" constant="82" id="ixE-Fx-Bwi"/>
+                            <constraint firstItem="HQT-Yz-92e" firstAttribute="leading" secondItem="Zd0-eU-9WJ" secondAttribute="leadingMargin" constant="73" id="rYW-12-CCG"/>
+                            <constraint firstItem="HQT-Yz-92e" firstAttribute="top" secondItem="1Xa-YJ-tmJ" secondAttribute="bottom" constant="20" id="rcs-Je-O3U"/>
                             <constraint firstItem="fCa-7o-tYU" firstAttribute="leading" secondItem="VTn-ls-cMD" secondAttribute="leading" id="vfc-kb-5ZS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="系统设置" id="A88-qy-0U7"/>
                     <connections>
                         <outlet property="brightnessSlider" destination="fvL-zq-haU" id="iAI-R2-LVh"/>
-                        <outlet property="testSendBrightness" destination="J1X-qw-bSx" id="zrB-3U-8Zg"/>
+                        <outlet property="hostIPAddrInputView" destination="1Xa-YJ-tmJ" id="v7g-eO-8Ct"/>
+                        <outlet property="selfIPAddrView" destination="HQT-Yz-92e" id="dRX-d4-mQd"/>
+                        <outlet property="selfIPAddrViewWidthCons" destination="Bgg-vJ-eOH" id="FTK-CD-ZKz"/>
                         <outlet property="volumnSlider" destination="4dR-ke-dk3" id="xOF-yI-yme"/>
                     </connections>
                 </viewController>

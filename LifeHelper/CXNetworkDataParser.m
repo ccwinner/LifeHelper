@@ -67,8 +67,7 @@ typedef struct {
 }
 
 - (CXNetworkDataParserDataTuple *)processSystemSettingsVolumnData:(CXNetworkEventModel *)data {
-    int newValue = -1.;
-    newValue = [data.eventContent[kNetworkEventVolumnKeyNew] intValue];
+    float newValue = [data.eventContent[kNetworkEventVolumnKeyNew] floatValue];
     if (newValue < 0 || newValue > 1) {
         NSLog(@"设置的音量不符合要求");
         return NULL;

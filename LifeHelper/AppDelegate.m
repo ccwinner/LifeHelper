@@ -25,15 +25,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     //TODO: 获取并显示界面上的本机 ip_address, send_port, rec_port
-    CXNetworkCacheModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:CX_ARCHIEVED_NETINFO_FILE];
-    if (!model) {
+//    CXNetworkCacheModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:CX_ARCHIEVED_NETINFO_FILE];
+//    if (!model) {
 //    CXNetworkCacheModel *model = nil;
         NSString *hostAddr = [CXNetworkTool hostIpAddress];
-        model = [[CXNetworkCacheModel alloc] initWithIP:hostAddr
+        CXNetworkCacheModel *model = [[CXNetworkCacheModel alloc] initWithIP:hostAddr
                                                recPort:CX_SERVER_REC_PORT
                                               sendPort:CX_CLIENT_REC_PORT];
       //  [NSKeyedArchiver archiveRootObject:model toFile:CX_ARCHIEVED_NETINFO_FILE];
-    }
+//    }
     [self loadViews:model];
     //TODO: 网络连接准备
     [self doPreNetworkAndStart:model];

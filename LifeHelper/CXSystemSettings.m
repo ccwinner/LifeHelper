@@ -8,11 +8,12 @@
 
 #import "CXSystemSettings.h"
 #import <IOKit/IOKitServer.h>
+#import <CoreAudio/CoreAudio.h>
 
 const NSString *CX_EVENT_SYSTEMSETTINGS_BRIGHTNESS_UP = @"brightness_up";
 
 static float _brightness = -1.;
-static int _volumeLevel = -1;
+static float _volumeLevel = -1;
 
 @implementation CXSystemSettings
 
@@ -49,11 +50,44 @@ static int _volumeLevel = -1;
     return _brightness;
 }
 
-+ (void)setSystemVolume:(int)level {
-    NSString *scriptStr = [[NSString alloc] initWithFormat:@"set volume output volume %d",level];
++ (void)setSystemVolume:(float)level {
+    float actLevel = level * 100;
+    NSString *scriptStr = [[NSString alloc] initWithFormat:@"set volume output volume %f",actLevel];
     NSAppleScript *appleScript = [[NSAppleScript alloc] initWithSource:scriptStr];
     [appleScript executeAndReturnError:nil];
-    _volumeLevel = level;
+     _volumeLevel = actLevel;
+    /* ------  使用CoreAudio太麻烦了 ----------*/
+//    AudioObjectPropertyAddress defaultOutputDevicePropAddr = {
+//        kAudioHardwarePropertyDefaultOutputDevice,
+//        kAudioObjectPropertyScopeGlobal,
+//        kAudioObjectPropertyElementMaster
+//    };
+//    AudioDeviceID defaultOutputDeviceID;
+//    UInt32 volumedataSize = sizeof(defaultOutputDeviceID);
+//    OSStatus result = AudioObjectGetPropertyData(kAudioObjectSystemObject,
+//                                                 &defaultOutputDevicePropAddr,
+//                                                 0, NULL,
+//                                                 &volumedataSize, &defaultOutputDeviceID);
+//    
+//    if(kAudioHardwareNoError != result)
+//        return;
+//    
+//    AudioObjectPropertyAddress volumePropertyAddress = {
+//        kAudioDevicePropertyVolumeScalar,
+//        kAudioDevicePropertyScopeOutput,
+//        1 /*LEFT_CHANNEL*/
+//    };
+//    
+//    Float32 volume;
+//    volumedataSize = sizeof(volume);
+//    
+//    result = AudioObjectSetPropertyData(defaultOutputDeviceID,
+//                                        &volumePropertyAddress,
+//                                        0, NULL,
+//                                        sizeof(volume), &volume);
+//    if (result != kAudioHardwareNoError) {
+//        // ... handle error ...
+//    }
 }
 
 + (int)systemVolume {

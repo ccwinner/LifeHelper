@@ -31,7 +31,7 @@ extern const NSString *CX_EVENT_SYSTEMSETTINGS_BRIGHTNESS_UP;
 
  @param level 1 最响
  */
-+ (void)setSystemVolume:(int)level;
++ (void)setSystemVolume:(float)level;
 /**
  获取系统声音级别
  

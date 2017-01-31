@@ -10,7 +10,7 @@
 #define CXCONSTS_h
 
 #define CX_ARCHIEVED_NETINFO_FILE @"network_info.log"
-#define CX_SERVER_REC_PORT (9502)
+#define CX_SERVER_REC_PORT (9527)
 #define CX_CLIENT_REC_PORT (9500)
 
 #endif /* CXCONSTS_h */

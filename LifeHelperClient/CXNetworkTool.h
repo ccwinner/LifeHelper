@@ -15,6 +15,6 @@
 
  @return 字符串形式的ip address
  */
-+ (NSString *)hostIpAddress;
++ (NSString *)ipAddress;
 
 @end

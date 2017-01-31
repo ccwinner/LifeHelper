@@ -19,7 +19,7 @@
 - (void)prepareForNetworkConnection;
 - (void)connectToHost;
 - (void)sendModel:(id)model;
-
+- (NSString *)ipAddress;
 //cache
 - (void)storeData;
 @end
