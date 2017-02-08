@@ -21,6 +21,6 @@ FOUNDATION_EXPORT CXNetworkManager* CXNetworkManagerInstance();
  主动监听接收数据
  */
 - (void)onReceivingData;
-- (void)setOnReceivngDataCompletion:(void (^)(CXNetworkEventType type, float oldValue, float newValue))onReceivngDataCompletion;
+- (void)setOnReceivngDataCompletion:(void (^)(CXNetworkEventType type, id value1, id value2))onReceivngDataCompletion;
 - (void)sendModel:(CXNetworkEventModel *)model;
 @end

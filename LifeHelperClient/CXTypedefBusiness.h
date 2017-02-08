@@ -12,7 +12,7 @@
 typedef NS_ENUM(NSInteger, CXNetworkEventType) {
     CXNetworkEventTypeSettingsBrightness,
     CXNetworkEventTypeSettingsVolum,
-    CXNetworkEventTypeClickCommand //比如打开app之类的指令命令
+    CXNetworkEventTypeClickCommandOpenApp //比如打开app之类的指令命令
 };
 
 #endif /* CXTypedefBusiness_h */

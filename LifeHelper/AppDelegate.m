@@ -11,6 +11,8 @@
 #import "CXNetworkCacheModel.h"
 #import "CXNetworkManager.h"
 #import "CXSystemSettings.h"
+#import "CXCustomCommandWorker.h"
+#import "CXCustomCommandWorker.h"
 
 @interface AppDelegate ()
 
@@ -41,6 +43,9 @@
 //                                                         selector:@selector(listNotifis:)
 //                                                             name:nil
 //                                                           object:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [CXCustomCommandWorker launchDash];
+    });
 }
 
 
@@ -63,11 +68,13 @@
 - (void)doPreNetworkAndStart:(CXNetworkCacheModel *)data {
     CXNetworkManagerInstance().recPort = data.recPort;
     CXNetworkManagerInstance().sendPort = data.sendPort;
-    CXNetworkManagerInstance().onReceivngDataCompletion = ^(NSInteger type, float oldValue, float newValue) {
+    CXNetworkManagerInstance().onReceivngDataCompletion = ^(NSInteger type, id value1, id value2) {
         if (CXNetworkEventTypeSettingsBrightness == type) {
-            [CXSystemSettings setDisplayBrightness:newValue];
+            [CXSystemSettings setDisplayBrightness:[(NSNumber *)value2 floatValue]];
         } else if (CXNetworkEventTypeSettingsVolum == type) {
-            [CXSystemSettings setSystemVolume:newValue];
+            [CXSystemSettings setSystemVolume:[(NSNumber *)value2 floatValue]];
+        } else if (CXNetworkEventTypeClickCommandOpenApp == type) {
+            [CXCustomCommandWorker launchAppWithAppName:value2];
         }
         self.iPAddressLabel.stringValue = @"收到了";
     };

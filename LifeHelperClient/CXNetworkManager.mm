@@ -31,7 +31,7 @@ CXNetworkManager * CXNetworkManagerInstance() {
 {
     GCDAsyncUdpSocket               *_udpSocket;
     CXQueue                         *_delegateQueue;
-    CXNetworkDataParser       *_dataParser;
+    CXNetworkDataParser             *_dataParser;
     dispatch_queue_t                _dataParsingQueue;
 }
 

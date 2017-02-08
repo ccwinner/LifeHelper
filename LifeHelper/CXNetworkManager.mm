@@ -25,7 +25,7 @@ CXNetworkManager * CXNetworkManagerInstance() {
 
 @interface CXNetworkManager ()<GCDAsyncUdpSocketDelegate>
 
-@property (nonatomic, copy) void (^onReceivngDataCompletion)(CXNetworkEventType type, float oldValue, float newValue);
+@property (nonatomic, copy) void (^onReceivngDataCompletion)(CXNetworkEventType type, id value1, id value2);
 
 @end
 
@@ -66,7 +66,7 @@ CXNetworkManager * CXNetworkManagerInstance() {
 }
 
 #pragma mark - setters
-- (void)setOnReceivngDataCompletion:(void (^)(CXNetworkEventType, float, float))onReceivngDataCompletion {
+- (void)setOnReceivngDataCompletion:(void (^)(CXNetworkEventType, id, id))onReceivngDataCompletion {
     _onReceivngDataCompletion = [onReceivngDataCompletion copy];
 }
 

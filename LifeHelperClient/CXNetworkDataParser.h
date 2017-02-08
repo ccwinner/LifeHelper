@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^completeCallback)(CXNetworkEventType type, float oldValue, float newValue);
+typedef void(^completeCallback)(CXNetworkEventType type, id value1, id value2);
 
 @interface CXNetworkDataParser : NSObject
 
